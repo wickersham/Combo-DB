@@ -1,0 +1,55 @@
+
+
+.container {
+    padding: 20px;
+    border: 1px solid black;
+}
+
+#words {
+    margin: 30px;
+    width: 750px;
+}
+
+#gamesbar {
+    font: 18px sans-serif;
+    margin: 4px;
+    border: 2px solid white;
+    clear: both;
+    width: 230px;
+    float: right;
+    list-style-type: none;
+}
+
+#gamesbar li {
+    font: 18px sans-serif;
+    margin: 4px;
+    border: 2px solid white;
+    clear: both;
+    width: 230px;
+    float: right;
+    list-style-type: none;
+}
+
+#topbar li {
+    font: 18px sans-serif;
+    text-align: center;
+    list-style-type: none;
+    display: inline;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid black;
+    
+   }
+
+/*
+
+a {
+    color: 
+    text-decoration: none;
+  
+}
+
+a:visited {
+    color: #f0f0f0;
+}*/
