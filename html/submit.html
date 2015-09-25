@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Combo Database</title>
     
-    <link rel="stylesheet" href="../style/style.css">
+    
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style.css">
     <script src="../js/app.js"></script>
 
 </head>
@@ -35,34 +36,44 @@
             <li>Skullgirls</li>
             <li>MKX</li>
             <li>Smash</li>
-            <li>Super SF2 Turbo</li>            
+            <li>Super SF2 Turbo</li>
+            <li>DIVEKICK</li>            
             
         </ul>
         
     </div>
     
-    <section id="words">don't see the combo you're looking for? submit it to the database! <br>work in progress </section>
+    <section id="words">Don't see the combo you're looking for? submit it to the database! <br>Work in progress </section>
     
-    <div id="submitform">
+    <div id="submitform" class="col-xs-8">
        
         <label for="character">Character:</label>
-        <input type="text" id="characterinput"> <br>
-        <label for="game">Game:</label>
-        <input type="text" id="gameinput"> <br>
+        <input type="text" class="form-control" id="characterinput"> <br>
+        
+        <label for="game" >Game:</label>
+        <input type="text" class="form-control" id="gameinput"> <br>
+        
         <label for="notation">Combo Notation:</label>
-        <input type="text" id="notationinput"> <br>
-        <label for="aka">Other names:</label>
-        <input type="text" id="akainput"> <br>
+        <input type="text" class="form-control" id="notationinput"> <br>
+        
+        <label for="aka" >Other names:</label>
+        <input type="text" class="form-control" id="akainput"> <br>
+        
         <label for="damage">Damage:</label>
-        <input type="text" id="damageinput"> <br>
+        <input type="text" class="form-control" id="damageinput"> <br>
+        
         <label for="stun">Stun:</label>
-        <input type="text" id="stuninput"> <br>
+        <input type="text" class="form-control" id="stuninput"> <br>
+        
         <label for="description">Main description:</label>
         <textarea type="text" id="descriptioninput" class="form-control" rows= "5"></textarea> <br>
+        
         <label for="tags">Tags (separated by commas)</label>
-        <input type="text" id="tagsinput"> <br>
+        <input type="text" class="form-control" id="tagsinput"> <br>
+        
         <label for="video">Youtube Embed Link</label>
-        <input type="text" id="videoinput"> <br>
+        <input type="text" class="form-control" id="videoinput"> <br>
+        
         <label for="modified">Last Modified (auto fills in)</label>    
         
     </div>

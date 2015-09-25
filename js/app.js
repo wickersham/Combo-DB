@@ -1,7 +1,13 @@
 var combotemplate = {
-    character: "ryu",
-    game: "sf5",
-    notation: "cMK fireball",
+    character: "Ryu",
+    game: "Street Fighter V",
+    notation: "cMK > hadoken > super",
+    damage: 344,
+    stun: 190,
+    aka: "low forward fireball super",
+    tags: [easy, hit confirm, low start],
+    youtube: "https://www.youtube.com/embed/dFSLtyfuGPQ",
+    modified: "9/24/15",
 };
 
 
