@@ -41,8 +41,12 @@
     border: 1px solid black;
     
    }
-#name{
-    font: 16px sans-serif;
+#notation{
+    font: 18px sans-serif;
+}
+
+#aka {
+    font-size: 16px;
 }
 
 #damage {
@@ -53,16 +57,20 @@
 }
 
 #stun {
-    font: 25px fantasy;
+    font: 30px fantasy;
     float: right;
     margin: 10px;
-    padding-right: 150px;
+    padding-right: 100px;
 }
 
-#main {
+#description {
     width: 600px
 }
 
 #modified {
-text-align: center;
+    text-align: center;
+}
+
+.charactercombosubmit {
+    text-align: center;
 }
