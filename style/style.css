@@ -41,15 +41,24 @@
     border: 1px solid black;
     
    }
-
-/*
-
-a {
-    color: 
-    text-decoration: none;
-  
+#name{
+    font: 16px sans-serif;
 }
 
-a:visited {
-    color: #f0f0f0;
-}*/
+#damage {
+    font: 30px fantasy;
+    float: right;
+    margin: 10px;
+    padding-right: 100px;
+}
+
+#stun {
+    font: 25px fantasy;
+    float: right;
+    margin: 10px;
+    padding-right: 150px;
+}
+
+#main {
+    width: 600px
+}
