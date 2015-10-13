@@ -1,51 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Combo Database</title>
-    
-    
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="../js/app.js"></script>
 
-</head>
-<body>
-   <div class="container">
-    <h3><a href="/html/index.html">Combo Db</a></h3> <br>
-    
-    <header>
-        <ul id="topbar">
-            
-            <li><a href="index.html">home</a></li>
-            <li><a href="glossary.html">glossary</a></li>
-            <li>Training room</li>
-            <li><a href="submit.html">Submit a swaggy combo</a></li>
-            <li>About this site</li>
-            
-        </ul>
-    </header>
-    
-    <div id="gamesbar">
-        <a href="games.html">Games:</a> <br>
-        <ul>
-            <li><a href="sf5.html">Street Fighter V</a></li>
-            <li>UMVC3</li>
-            <li>Guilty Gear AC +R</li>
-            <li>Guilty Gear Xrd</li>
-            <li>Skullgirls</li>
-            <li>MKX</li>
-            <li>Smash</li>
-            <li>Super SF2 Turbo</li>
-            <li>DIVEKICK</li>            
-            
-        </ul>
-        
-    </div>
     
     <section id="words">Don't see the combo you're looking for? submit it to the database! <br>Work in progress </section>
     
     <div id="submitform" class="col-xs-8">
+
+<div ng-app="ngAnimate">     
+     <span>
+         <label for="movetype">
+             <select name="movetype" id="movetype" ng-model="moveType">movetype
+                 <option value="normal">normal</option>
+                 <option value="commandnormal">command normal</option>
+                 <option value="special">special</option>
+                 <option value="v skill">v skill</option>
+                 <option value="v trigger">v trigger</option>
+                 <option value="critical art">critical art</option>
+                 <option value="throw">throw</option>
+                 <option value="back throw">back throw</option>
+            </select>
+         </label>
+    </span>
+    
+    
+    
+</div>
+     
+     
+     
+<div ng-if="movetype == 'special'"> 
+ <p>normals</p>
+  <label>
+    <input type="radio" value="jumping">
+    jumping
+  </label><br/>
+  <label>
+    <input type="radio" value="standing">
+    standing
+  </label><br/>
+  <label>
+    <input type="radio" value="crouching">
+    crouching
+  </label><br/> <hr>
+  
+  <label>
+    <input type="radio" value="light">
+    light
+  </label><br/>
+  <label>
+    <input type="radio" value="medium">
+    medium
+  </label><br/>
+  <label>
+    <input type="radio" value="heavy">
+    heavy
+  </label><br/> <hr>
+</div>
+<!--
+    <label>
+    <input type="radio" ng-model="color.name" value="jumping">
+    punch
+  </label><br/>
+  <label>
+    <input type="radio" ng-model="color.name" ng-value="standing">
+    kick
+  </label><br/>
+</div>
+ 
+      <br><hr><br>
+      <div id="specials"> 
+      <p>specials</p>
+  <label>
+    <input type="radio" ng-model="color.name" value="jumping">
+    light
+  </label><br/>
+  <label>
+    <input type="radio" ng-model="color.name" ng-value="standing">
+    medium
+  </label><br/>
+  <label>
+    <input type="radio" ng-model="color.name" value="crouching">
+    heavy
+  </label><br/> <hr>
+  
+  <label>
+    <input type="radio" ng-model="color.name" value="jumping">
+    hadoken
+  </label><br/>
+  <label>
+    <input type="radio" ng-model="color.name" ng-value="standing">
+    shoryuken
+  </label><br/>
+  <label>
+    <input type="radio" ng-model="color.name" value="crouching">
+    tatsu
+  </label><br/> <hr>
+  
+-->
+  <br><br>
        
         <label for="character">Character:</label>
         <input type="text" class="form-control" id="characterinput"> <br>
@@ -79,14 +129,3 @@
     </div>
     
     
-   <footer>
-       <ul>
-           
-       </ul>
-       
-   </footer>
-    
-    
-    </div>
-</body>
-</html>

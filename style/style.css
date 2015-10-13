@@ -1,8 +1,12 @@
 
 
-.container {
+#allcontainer {
     padding: 20px;
     border: 1px solid black;
+}
+
+#normals{
+display: none;
 }
 
 #words {
@@ -13,7 +17,7 @@
 }
 
 #gamesbar {
-    font: 18px sans-serif;
+    font: 1em sans-serif;
     margin: 4px;
     border: 2px solid white;
     clear: both;
@@ -23,17 +27,17 @@
 }
 
 #gamesbar li {
-    font: 18px sans-serif;
+    font: 1em sans-serif;
     margin: 4px;
     border: 2px solid white;
     clear: both;
-    width: 230px;
+    width: 170px;
     float: right;
     list-style-type: none;
 }
 
 #topbar li {
-    font: 18px sans-serif;
+    font: 1em sans-serif;
     text-align: center;
     list-style-type: none;
     display: inline;
@@ -44,23 +48,24 @@
     
    }
 #notation{
-    font: 18px sans-serif;
+    font: 28px monospace;
 }
 
 #aka {
-    font-size: 16px;
+    font: 16px monospace;
+    
 }
 
 #damage {
-    font: 30px fantasy;
-    float: right;
+    font: 24px monospace;
+/*    float: right;*/
     margin: 10px;
     padding-right: 100px;
 }
 
 #stun {
-    font: 30px fantasy;
-    float: right;
+    font: 24px monospace;
+/*    float: right;*/
     margin: 10px;
     padding-right: 100px;
 }
@@ -69,9 +74,6 @@
     width: 600px;
 }
 
-#descriptioninput{
-    width: 600;
-}
 
 #modified {
     text-align: center;
