@@ -1,0 +1,43 @@
+
+    
+    <section id="words">Don't see the combo you're looking for? submit it to the database! <br>Work in progress </section>
+    <div>* = required!</div>
+    
+    <div id="submitform" class="col-xs-8">
+
+       <form ng-submit="createCombo()"></form>
+       
+        <label for="character">Character: *</label>
+        <input type="text" class="form-control" id="characterinput" ng-model="comboData.charname"> <br>
+        
+        <label for="game" >Game: *</label>
+        <input type="text" class="form-control" id="gameinput" ng-model="comboData.game"> <br>
+        
+        <label for="notation"  data-toggle="tooltip" title="Solar Plexus Strike, forward Hp">Combo Notation: *</label>
+        <input type="text" class="form-control" id="notationinput"  ng-model="comboData.notation"> <br>
+        
+        <label for="aka" >Other names:</label>
+        <input type="text" class="form-control" id="akainput"  ng-model="comboData.aka"> <br>
+        
+        <label for="damage">Damage: *</label>
+        <input type="text" class="form-control" id="damageinput"  ng-model="comboData.dmg"> <br>
+        
+        <label for="stun">Stun:</label>
+        <input type="text" class="form-control" id="stuninput"  ng-model="comboData.stun"> <br>
+        
+        <label for="description">Main description:</label>
+        <textarea type="text" id="descriptioninput" class="form-control" rows= "5"  ng-model="comboData.description"></textarea> <br>
+        
+        <label for="tags">Tags (separated by commas) *</label>
+        <input type="text" class="form-control" id="tagsinput"  ng-model="comboData.tags"> <br>
+        
+        <label for="video">Youtube Embed Link</label>
+        <input type="text" class="form-control" id="videoinput"  ng-model="comboData.yt"> <br>
+        
+        <label for="modified"  ng-model="comboData.modified">Last Modified *(auto fills in)</label>    
+        
+        <button type=submit class="btn btn-default">create it</button>
+        
+    </div>
+    
+    
