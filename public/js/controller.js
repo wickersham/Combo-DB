@@ -5,6 +5,7 @@ app.controller("comboConstruct", function($scope, $http) {
 //        $scope.comboData.completed = false;
         $http.post("/api/combos", $scope.comboData)
             .then(function(response) {
+                console.log("response");
                 $scope.comboData = {};
         });
     };
@@ -26,9 +27,9 @@ app.controller("comboList", function($scope, $http) {
         var url = "/api/combos/" + id;
         
         $http.delete(url)
-        .then(function(response){
-            getCombos();
-        });
+            .then(function(response){
+                getCombos();
+            });
     };
 
 });

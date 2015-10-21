@@ -11,8 +11,9 @@ app.config(function($routeProvider) {
     .when("/sf5", {
         templateUrl: "html/sf5.html"
     })
-    .when("/glossary", {
+    .when("/help", {
         templateUrl: "html/glossary.html"
+        //routes with params
     })
     .when("/test", {
         templateUrl: "html/test.html"
@@ -21,10 +22,15 @@ app.config(function($routeProvider) {
         templateUrl: "html/test2.html"
     })
     .when("/submit", {
-        templateUrl: "html/submit.html"
+        templateUrl: "html/submit.html",
+        controller: "controller.js"
     })
     .when("/sf5ryu", {
         templateUrl: "html/sf5ryu.html"
+    })
+    .when("/output", {
+        templateUrl: "html/testoutput.html",
+        controller: "controller.js"
     })
     .otherwise({
         redirectTo: "/home"

@@ -1,50 +1,11 @@
-  <section id="object" class="container" class="col-md-8">
-        <h2 id="character">Ryu</h2>
-        <div class="charactercombosubmit">click <a href="submit.html">here</a> to submit a ryu combo</div>
-        <h4 id="game">Street Fighter V</h4> <br>
-        
-        
-        
-        <span id="notation">  
-        
-<div class="ay" class="container" class="row" class="col-md-6">
- 
-  <span id=cb><a href="#" data-toggle="tooltip" title="Solar Plexus Strike, forward Hp"> f + Hp </a></span>
-  
-  <span id="link"><a href="#" data-toggle="tooltip" title="link into"> , </a></span>
-  
-  <span id="lp"><a href="#" data-toggle="tooltip" title="Standing Light Punch"> Lp </a></span>
-  
-  <span id="cancel"><a href="#" data-toggle="tooltip" title="cancel into"> > </a></span>
-  
-  <span id="chp"><a href="#" data-toggle="tooltip" title="Crouching Heavy Punch"> c. Hp </a></span> 
-  
-  <span id="cancel"><a href="#" data-toggle="tooltip" title="cancel into"> > </a></span>
-  
-  <span id="tatsu"><a href="#" data-toggle="tooltip" title="Quarter Circle Back MK">
-  Mk Tatsu </a></span> 
-  
-  <span id="link"><a href="#" data-toggle="tooltip" title="link into"> , </a></span>
-  
-  <span id="ca"><a href="#" data-toggle="tooltip" title="Quarter Circle Forward (x2) with any Punch">
-  Critical Art </a></span> 
-  
-</div>  
-        </span> <br>
-        <span id="damage">damage: 100</span> <br>
-        <span id="stun">stun: 100</span> <br><br>
-        <span id="aka">AKA: click <a href="#">here</a> to submit a name for this combo</span> <br> <br>
-        
-        <div id="description">notes: good for punish, or after opponent is stunned</div>
-
-        <br>
-        <div id="tags">tags: punish, meter burn,</div>
-        
-        
-        <br>
-        <div id="modified">last edited: 10/09/15</div>
-        <br><hr>
-       <iframe id= "video" width="560" height="315" src="https://www.youtube.com/embed/dFSLtyfuGPQ" frameborder="0" allowfullscreen></iframe>
-        </section>
+<div class="container" ng-repeat="combo in combos">
+    <div class="well">
+       <h1>{{ combo.notation }}</h1>
+       <p>{{ combo.dmg }}</p>
+       <p>{{ combo.charname }}</p>
+       <p>{{ combo.game }}</p>
+        <button type="submit" ng-click="removeCombo(combo._id)"></button>
+    </div>
     
+</div>
     
