@@ -12,7 +12,7 @@ app.config(function($routeProvider) {
         templateUrl: "html/sf5.html"
     })
     .when("/help", {
-        templateUrl: "html/glossary.html"
+        templateUrl: "html/help.html"
         //routes with params
     })
     .when("/test", {
@@ -23,22 +23,20 @@ app.config(function($routeProvider) {
     })
     .when("/submit", {
         templateUrl: "html/submit.html",
-        controller: "controller.js"
+        controller: "comboConstruct"
     })
     .when("/sf5ryu", {
         templateUrl: "html/sf5ryu.html"
     })
     .when("/output", {
         templateUrl: "html/testoutput.html",
-        controller: "controller.js"
+        controller: "comboList"
     })
     .otherwise({
         redirectTo: "/home"
     });
 
-
 });
-
 
 
 

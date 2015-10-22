@@ -5,10 +5,10 @@
     
     <div id="submitform" class="col-xs-8">
 
-       <form ng-submit="createCombo()"></form>
+       <form ng-submit="createCombo()">
        
         <label for="character">Character: *</label>
-        <input type="text" class="form-control" id="characterinput" ng-model="comboData.charname"> <br>
+        <input type="text" class="form-control" id="characterinput" ng-model="comboData.character"> <br>
         
         <label for="game" >Game: *</label>
         <input type="text" class="form-control" id="gameinput" ng-model="comboData.game"> <br>
@@ -22,7 +22,7 @@
 -->
         
         <label for="damage">Damage: *</label>
-        <input type="text" class="form-control" id="damageinput"  ng-model="comboData.dmg"> <br>
+        <input type="text" class="form-control" id="damageinput"  ng-model="comboData.damage"> <br>
         
 <!--
         <label for="stun">Stun:</label>
@@ -40,8 +40,8 @@
         <label for="modified"  ng-model="comboData.modified">Last Modified *(auto fills in)</label>    
 -->
         
-        <button type=submit class="btn btn-default">create it</button>
-        
+        <button type="submit" class="btn btn-default">create it</button>
+        </form>
     </div>
     
     

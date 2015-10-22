@@ -12,13 +12,13 @@ var comboSchema = new Schema({
     game: String,
     notation: String,
     damage: Number,
-    tags: Array,
-    modified: Date,
-    
-    stun: Number,
-    range: String, // must be close/far
-    aka: String,
-    notes: String,
+//    tags: Array,
+//    modified: Date,
+//    
+//    stun: Number,
+//    range: String, // must be close/far
+//    aka: String,
+//    notes: String,
     // yt/source field
     
 });
@@ -40,7 +40,6 @@ server.get("/",function(req,res){
 });
 
 //api routes
-
 //get combos route
 server.get("/api/combos", function(req, res) {
     Combo.find({}, function(err, combos) {
@@ -66,39 +65,34 @@ server.delete("/api/combos/:id", function(req,res) {
 server.post("/api/combos", function(req, res) {
     var combo = new Combo({
         
-        character: req.body.charname,
+        character: req.body.character,
         game: req.body.game,
         notation: req.body.notation,
-        damage: req.body.dmg,
-        tags: req.body.tags,
-        modified: req.body.modified,
-
-        stun: req.body.stun,
-        range: req.body.range, // must be close/far
-        aka: req.body.aka,
-        notes: req.notes,
+        damage: req.body.damage,
+//        tags: req.body.tags,
+//        modified: req.body.modified,
+//
+//        stun: req.body.stun,
+//        range: req.body.range, // must be close/far
+//        aka: req.body.aka,
+//        notes: req.notes,
         // yt/source field
  
     });
     //mongoose model function
     combo.save(function(err){
         if (err) {
-            console.log(err);
+            console.error(err);
         }
         console.log(combo);
         res.json(combo);
-    });
+    })
 });
 
 
 server.listen(1337, function(){
     console.log("now listening on port 1337");
 });
-
-
-
-
-
 
 
 

@@ -5,7 +5,7 @@ app.controller("comboConstruct", function($scope, $http) {
 //        $scope.comboData.completed = false;
         $http.post("/api/combos", $scope.comboData)
             .then(function(response) {
-                console.log("response");
+                console.log(response);
                 $scope.comboData = {};
         });
     };
