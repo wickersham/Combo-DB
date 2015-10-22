@@ -26,7 +26,8 @@ app.config(function($routeProvider) {
         controller: "comboConstruct"
     })
     .when("/sf5ryu", {
-        templateUrl: "html/sf5ryu.html"
+        templateUrl: "html/sf5ryu.html",
+        controller: "comboList"
     })
     .when("/output", {
         templateUrl: "html/testoutput.html",

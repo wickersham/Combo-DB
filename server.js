@@ -12,7 +12,7 @@ var comboSchema = new Schema({
     game: String,
     notation: String,
     damage: Number,
-//    tags: Array,
+    tags: Array,
 //    modified: Date,
 //    
 //    stun: Number,
@@ -69,7 +69,7 @@ server.post("/api/combos", function(req, res) {
         game: req.body.game,
         notation: req.body.notation,
         damage: req.body.damage,
-//        tags: req.body.tags,
+        tags: req.body.tags,
 //        modified: req.body.modified,
 //
 //        stun: req.body.stun,
@@ -84,7 +84,7 @@ server.post("/api/combos", function(req, res) {
         if (err) {
             console.error(err);
         }
-        console.log(combo);
+        console.log(combo.tags);
         res.json(combo);
     })
 });

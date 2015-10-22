@@ -1,11 +1,13 @@
 <div class="container" ng-repeat="combo in combos">
-    <div class="well" class=".col-md-8">
+    <div class="well" class="col-md-6">
        <h1>{{ combo.notation }}</h1>
        
        <p>character: {{ combo.character }}</p>
        <p>game: {{ combo.game }}</p>
        <p>dmg: {{ combo.damage }}</p>
+       <p>tags: {{ combo.tags }}</p>
         <button type="submit" ng-click="deleteCombo(combo._id)">x</button>
+        <button type="" >edit</button>
     </div>
     
 </div>
