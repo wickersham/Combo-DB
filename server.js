@@ -12,13 +12,16 @@ var comboSchema = new Schema({
     game: String,
     notation: String,
     damage: Number,
-    tags: Array,
+    notes: String,
+    stun: Number,
+    
+//    tags: Array,
 //    modified: Date,
 //    
-//    stun: Number,
+//    
 //    range: String, // must be close/far
 //    aka: String,
-//    notes: String,
+
     // yt/source field
     
 });
@@ -70,12 +73,14 @@ server.post("/api/combos", function(req, res) {
         notation: req.body.notation,
         damage: req.body.damage,
         tags: req.body.tags,
+        stun: req.body.stun,
+        notes: req.body.notes        
 //        modified: req.body.modified,
 //
-//        stun: req.body.stun,
+//        
 //        range: req.body.range, // must be close/far
 //        aka: req.body.aka,
-//        notes: req.notes,
+//        
         // yt/source field
  
     });
@@ -84,7 +89,7 @@ server.post("/api/combos", function(req, res) {
         if (err) {
             console.error(err);
         }
-        console.log(combo.tags);
+//        console.log(combo.tags);
         res.json(combo);
     })
 });

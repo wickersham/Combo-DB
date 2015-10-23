@@ -3,94 +3,151 @@
     <section id="words">Don't see the combo you're looking for? submit it to the database! <br>Work in progress </section>
     <div>* = required!</div><hr>
     
-    <div id="submitform" class="col-xs-8">
-
+    
+    
+    <div id="submitform">
        <form ng-submit="createCombo()">
-       
-        
+       <div class="container-fluid">
+        <div class="row" >
+            <div class="form-group col-xs-5">
+                <label for="game">* Game:</label>
+                    <select class="form-control" id="game" ng-model="comboData.game">
+                        <option value = "sfv">Street Fighter V</option>
+                        <option value = "sg">Skullgirls</option>
+                        <option value = "marvel3">Marvel 3</option>
+    <!--
+                        <option value = "ggac">Guilty Gear AC +R</option>
+                        <option value = "ggxrd">Guilty Gear Xrd</option>
+                        <option value = "kof13">King of Fighters XIII</option>
+    -->
 
-        <div class="form-group">
-            <label for="game">*Game:</label>
-                <select class="form-control" id="game" ng-model="comboData.game">
-                    <option value = "sfv">Street Fighter V</option>
-                    <option value = "sg">Skullgirls</option>
-                    <option value = "marvel3">Marvel 3</option>
-                    <option value = "ggac">Guilty Gear AC +R</option>
-                    <option value = "ggxrd">Guilty Gear Xrd</option>
-                    <option value = "kof13">King of Fighters XIII</option>
-
-                </select>
+                    </select>
+            </div>
         </div>
         
-        <div ng-show="comboData.game == 'sfv'">
-        <label for="character">* Character:</label>
-        
-        <select class="form-control" id="character" ng-model="comboData.character">
-                    <option value = "ryu">Ryu</option>
-                    <option value = "chun">Chun</option>
-                    <option value = "nash">Nash</option>
-                    <option value = "dic">Dictator (Bison)</option>
-                    <option value = "claw">Claw (Vega)</option>
-                    <option value = "cammy">Cammy</option>
-                    <option value = "birdie">Birdie</option>
-                    <option value = "ken">Ken</option>
-                    <option value = "necalli">Necalli</option>
-                    <option value = "mika">R Mika</option>
-                    <option value = "rashid">Rashid</option>
-                    <option value = "karin">Karin</option>
-                    <option value = "zangief">Zangief</option>
-                    <option value = "laura">Laura</option>
-                    <option value = "juri">Juri</option>
-                    <option value = "zen">Zen</option>
-                    <option value = "tba">---</option>
-                    
-                </select>
-        </div><br>
-        
-<!--        copy paste for other games-->
-        <div ng-show="comboData.game == 'marvel3'">
-        <label for="character">* Character:</label>
-        
-        <select class="form-control" id="character" ng-model="comboData.character">
-                    <option value = "ryu">Ryu</option>
-                    <option value = "chun">Chun</option>
-                    <option value = "trish">Trish</option>
-                    <option value = "spencer">Spencer</option>
-                    <option value = "haha">Gene</option>
-                    
-                </select>
-        </div><br>
-        
-        
-        
-        
-        
-        
-        
-        <label for="notation"  data-toggle="tooltip" title="notation">* Combo Notation:</label>
-        <input type="text" class="form-control" id="notationinput"  ng-model="comboData.notation"> <br>
-        
+        <div class="row">
+            <div ng-show="comboData.game == 'sfv'" class="form-group col-xs-5">
+                <label for="character">* Character:</label>
 
-        
-        <label for="damage">* Damage:</label>
-        <input type="text" class="form-control" id="damageinput"  ng-model="comboData.damage"> <br>
+                <select class="form-control" id="character" ng-model="comboData.character">
+                            <option value = "ryu">Ryu</option>
+                            <option value = "chun">Chun</option>
+                            <option value = "nash">Nash</option>
+                            <option value = "dic">Dictator (Bison)</option>
+                            <option value = "claw">Claw (Vega)</option>
+                            <option value = "cammy">Cammy</option>
+                            <option value = "birdie">Birdie</option>
+                            <option value = "ken">Ken</option>
+                            <option value = "necalli">Necalli</option>
+                            <option value = "mika">R Mika</option>
+                            <option value = "rashid">Rashid</option>
+                            <option value = "karin">Karin</option>
+                            <option value = "zangief">Zangief</option>
+                            <option value = "laura">Laura</option>
+                            <option value = "juri">Juri</option>
+                            <option value = "zen">Zen</option>
+                            <option value = "tba">---</option>
 
-        <!--
-        <label for="aka" >Other names:</label>
-        <input type="text" class="form-control" id="akainput"  ng-model="comboData.aka"> <br>
--->
-                        
-<!--
-        <label for="stun">Stun:</label>
-        <input type="text" class="form-control" id="stuninput"  ng-model="comboData.stun"> <br>
+                        </select>
+            </div>
+        </div>
         
-        <label for="description">Main description:</label>
-        <textarea type="text" id="descriptioninput" class="form-control" rows= "5"  ng-model="comboData.description"></textarea> <br>
--->
+           
+        <div class="row" >
+            <div ng-show="comboData.game == 'marvel3'"  class="form-group col-xs-5">
+                <label for="character">* Character:</label>
+                <span>Capcom</span>
+                <select class="form-control" id="character" ng-model="comboData.character">
+                           <option value = "akuma">Akuma</option>
+                            <option value = "amaterasu">Amaterasu</option>
+                            <option value = "arthur">Arthur</option>
+                            <option value = "c viper">C Viper</option>
+                            <option value = "chris">Chris</option>
+                            <option value = "chun">Chun Li</option>
+                            <option value = "dante">Dante</option>
+                            <option value = "felicia">Felicia</option>
+                            <option value = "firebrand">Firebrand</option>
+                            <option value = "frank west">Frank West</option>
+                            <option value = "haggar">Haggar</option>
+                            <option value = "hsien ko">Hsien Ko</option>
+                            <option value = "jill">Jill</option>
+                            <option value = "morrigan">Morrigan</option>
+                            <option value = "nemesis">Nemesis</option>
+                            <option value = "phoenix wright">Phoenix Wright</option>
+                            <option value = "ryu">Ryu</option>
+                            <option value = "spencer">Spencer</option>
+                            <option value = "strider">Strider</option>
+                            <option value = "trish">Trish</option>
+                            <option value = "tron bonne">Tron Bonne</option>
+                            <option value = "vergil">Vergil</option>
+                            <option value = "viewtiful joe">Viewtiful Joe</option>
+                            <option value = "wesker">Wesker</option>
+                            <option value = "zero">Zero</option>
+
+
+                        </select>
+            </div>
+        </div>
         
-        <label for="tags">* Tags (separated by commas)</label>
-        <input type="text" class="form-control" id="tagsinput"  ng-model="comboData.tags"> <br>
+        <div class="row" >
+                <div ng-show="comboData.game == 'sg'" class="form-group col-xs-5">
+                    <label for="character">* Character:</label>
+
+                    <select class="form-control" id="character" ng-model="comboData.character">
+                                <option value = "squig">Squigly</option>
+                                <option value = "bb">Big Band</option>
+                                <option value = "eliza">Eliza</option>
+                                <option value = "fortune">Fortune</option>
+                                <option value = "cock">Peacock</option>
+                                <option value = "pw">Painwheel</option>
+                                <option value = "filia">Filia</option>
+                                <option value = "bella">Cerabella</option>
+                                <option value = "val">Valentine</option>
+                                <option value = "parasoul">Parasoul</option>
+                                <option value = "double">Double</option>
+                                <option value = "fukua">Fukua</option>
+                                <option value = "beow">Beowulf</option>
+                                <option value = "robo f">Robo Fortune</option>
+
+                            </select>
+                    </div>
+        </div>
         
+        
+        <div class="row" >
+            <div class="form-group col-xs-5">
+                <label for="notation"  data-toggle="tooltip" title="notation">* Combo Notation:</label>
+                <input type="text" class="form-control" id="notationinput"  ng-model="comboData.notation"> 
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="form-group col-xs-5">
+                <label for="damage">* Damage:</label>
+                <input type="text" class="form-control" id="damageinput"  ng-model="comboData.damage"> <br>
+            </div>
+        </div>
+
+        <div class="row" >   
+            <div class="form-group col-xs-5">             
+                <label for="stun">Stun:</label>
+                <input type="text" class="form-control" ng-model="comboData.stun"> <br>
+            </div>
+        </div>
+        
+        <div class="row" >
+            <div class="form-group col-xs-5">
+                <label for="description">Notes:</label>
+                <textarea type="text" class="form-control" rows= "5"  ng-model="comboData.notes"></textarea> 
+            </div>
+        </div>
+        
+        <div class="row" >
+            <div class="form-group col-xs-5">
+                <label for="tags">* Tags (separated by commas)</label>
+                <input type="text" class="form-control" id="tagsinput"  ng-model="comboData.tags">
+            </div>
+        </div>
 <!--
         <label for="who">tested on:</label>
         <div class="checkbox">
@@ -111,16 +168,22 @@
         </span>
         </div>
 -->
+        <!--
+        <label for="aka" >Other names:</label>
+        <input type="text" class="form-control" id="akainput"  ng-model="comboData.aka"> <br>
+-->
+
 <!--
         <label for="video">Youtube Embed Link</label>
         <input type="text" class="form-control" id="videoinput"  ng-model="comboData.yt"> <br>
         
         <label for="modified"  ng-model="comboData.modified">Last Modified *(auto fills in)</label>    
 -->
-    <div ng-show="comboData.game == 'sfv'">
 
+<!--
+       <span ng-show="comboData.game == 'sfv'">
         <label for="who">tested on:</label>
-        <div class="checkbox">
+        <span class="checkbox">
 
         <label class="checkbox-inline"><input type="checkbox" value="">Ryu</label>
 
@@ -152,12 +215,21 @@
 
         <label class="checkbox-inline"><input type="checkbox" value="">Juri</label>
 
-        </div>
-    </div>
+        </span>
+        
+        did it work?
+        
+        
+        </span>
+-->
+<!--    </div>-->
+          </div>
            
-       <div ng-show="comboData.game == 'sg'">skullgurls</div>
+        <br><br>
         
         <button type="submit" class="btn btn-default">create it</button>
+        
+        <br><br><br><br><br>
         </form>
     </div>
     

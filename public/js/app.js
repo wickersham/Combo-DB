@@ -8,6 +8,10 @@ app.config(function($routeProvider) {
     .when("/games", {
         templateUrl: "html/games.html"
     })
+//    .when("/games/:game", {
+//        templateUrl: "",
+//        controller: "gamesController""
+//    })
     .when("/sf5", {
         templateUrl: "html/sf5.html"
     })

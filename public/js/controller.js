@@ -33,3 +33,8 @@ app.controller("comboList", function($scope, $http) {
     };
 
 });
+
+//app.controller("gamesController", function($scope, $routeParams) {
+//    
+//    
+//})
