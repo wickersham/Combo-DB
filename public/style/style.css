@@ -3,10 +3,16 @@
 #allcontainer {
     padding: 20px;
     border: 1px solid black;
+    border-radius: 10px 10px 10px 10px;
 }
 
 #normals{
 display: none;
+}
+
+
+#main {
+/*    float: top;*/
 }
 
 #words {
@@ -19,7 +25,7 @@ display: none;
 #gamesbar {
     font: 1em sans-serif;
     margin: 4px;
-    border: 2px solid white;
+    border: 1px solid black;
     clear: both;
     width: 230px;
     float: right;
@@ -41,8 +47,8 @@ display: none;
     text-align: center;
     list-style-type: none;
     display: inline;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
     border-radius: 10px 10px 0 0;
     border: 1px solid black;
     

@@ -12,12 +12,11 @@ app.config(function($routeProvider) {
 //        templateUrl: "",
 //        controller: "gamesController""
 //    })
-    .when("/sf5", {
+    .when("/games/sf5", {
         templateUrl: "html/sf5.html"
     })
     .when("/help", {
         templateUrl: "html/help.html"
-        //routes with params
     })
     .when("/test", {
         templateUrl: "html/test.html"
@@ -29,9 +28,15 @@ app.config(function($routeProvider) {
         templateUrl: "html/submit.html",
         controller: "comboConstruct"
     })
-    .when("/sf5ryu", {
+    .when("/games/sf5/ryu", {
         templateUrl: "html/sf5ryu.html",
-        controller: "comboList"
+        controller: "characterCombos" 
+    })
+    .when("/games/marvel3", {
+        templateUrl: "html/marvel3.html"
+    })
+    .when("/games/marvel3/ryu", {
+        templateUrl: "html/marvel3ryu.html"
     })
     .when("/output", {
         templateUrl: "html/testoutput.html",
@@ -62,19 +67,4 @@ app.config(function($routeProvider) {
 //}
 
 
-//var combotemplate = {
-//    character: "Ryu",
-//    game: "Street Fighter V",
-//    notation: "cMK > hadoken > super",
-//    damage: 344,
-//    stun: 190,
-//    aka: "low forward fireball super",
-//    tags: ["easy", "hit confirm", "low start"],
-//    youtube: "https://www.youtube.com/embed/dFSLtyfuGPQ",
-//    modified: "9/24/15",
-//};
-//
-//
-//
-//
 //var quotebank = ["you can never lose with a good enough excuse", "that's why i dont go outside", "florida is not part of the east coast", "having trouble with an opponent who blocks too much? try using a throw!", "the answer lies in the heart of battle"];

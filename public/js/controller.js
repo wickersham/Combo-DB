@@ -3,6 +3,7 @@ app.controller("comboConstruct", function($scope, $http) {
     
     $scope.createCombo = function() {
 //        $scope.comboData.completed = false;
+        
         $http.post("/api/combos", $scope.comboData)
             .then(function(response) {
                 console.log(response);
@@ -31,10 +32,20 @@ app.controller("comboList", function($scope, $http) {
                 getCombos();
             });
     };
+});
 
+app.controller("characterCombos", function($scope, $http) {
+    $scope.combosbycharacter = [];
+    var getCombosByCharacter = function() {
+        $http.get("/api/combos/:game/:character")
+            .then(function(response) {
+            $scope.combosbycharacter = response.data;
+        });
+    };
+    getCombosByCharacter();
 });
 
 //app.controller("gamesController", function($scope, $routeParams) {
-//    
+//    $scope.model
 //    
 //})

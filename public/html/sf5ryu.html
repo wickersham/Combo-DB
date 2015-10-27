@@ -14,12 +14,30 @@
     <br>
     <br>
     
-    <div>
+    <div> all the ryu combos for sfv
+<!--
         <ul>
-            <li></li>
+            <li ng-repeat = "combos in combosbycharacter">{{combo.notation}}</li>
         </ul>
+-->
     </div>
-    <br>
-    <br>
-    <br>
+
+
+   <div class="container" ng-repeat="combo in combosbycharacter">
+    <div class="well" class="col-md-6">
+       <h1>{{ combo.notation }}</h1>
+       
+       <p>character: {{ combo.character }}</p>
+       <p>game: {{ combo.game }}</p>
+       <p>dmg: {{ combo.damage }}</p>
+       <p>tags: {{ combo.tags }}</p>
+       <p>stun: {{ combo.stun }}</p>
+       <p>notes: {{ combo.notes }}</p>
+
+        <button type="submit" ng-click="deleteCombo(combo._id)">x</button>
+<!--        <button type="" >edit</button>-->
+    </div>
+    
+</div>
+    
 <!--    <image src="../ryu-ts-stance.gif" alt="idle animation of ryu from third strike"></image>-->

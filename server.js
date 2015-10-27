@@ -63,6 +63,16 @@ server.delete("/api/combos/:id", function(req,res) {
     });
 });
 
+//get combos by game
+server.get("/api/combos/:game/:character", function(req, res) {
+    Combo.find({"game": req.params.game, "character": req.params.character}, function(err, combos) {
+        if(err) {
+            console.log(err);
+        }
+        res.send(combos);
+    });
+});
+
 
 //save route
 server.post("/api/combos", function(req, res) {
