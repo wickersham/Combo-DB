@@ -34,17 +34,21 @@ app.controller("comboList", function($scope, $http) {
     };
 });
 
-app.controller("characterCombos", function($scope, $http) {
+app.controller("characterCombos", function($scope, $http, $route) {
     $scope.combosbycharacter = [];
+    
+
     var getCombosByCharacter = function() {
-        $http.get("/api/combos/:game/:character")
+        $http.get("/api/combos/Street Fighter V/ryu")
             .then(function(response) {
             $scope.combosbycharacter = response.data;
+         console.log($route.current);
         });
     };
     getCombosByCharacter();
 });
 
+app.controller("grabCharactersFromGame")
 //app.controller("gamesController", function($scope, $routeParams) {
 //    $scope.model
 //    

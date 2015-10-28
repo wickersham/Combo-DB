@@ -12,9 +12,9 @@
             <div class="form-group col-xs-5">
                 <label for="game">* Game:</label>
                     <select class="form-control" id="game" ng-model="comboData.game">
-                        <option value = "sf5">Street Fighter V</option>
-                        <option value = "skullgirls">Skullgirls</option>
-                        <option value = "marvel3">Marvel 3</option>
+                        <option value = "Street Fighter V">Street Fighter V</option>
+                        <option value = "Skullgirls">Skullgirls</option>
+                        <option value = "UMVC3">Marvel 3</option>
     <!--
                         <option value = "ggac">Guilty Gear AC +R</option>
                         <option value = "ggxrd">Guilty Gear Xrd</option>
@@ -26,7 +26,7 @@
         </div>
         
         <div class="row">
-            <div ng-show="comboData.game == 'sfv'" class="form-group col-xs-5">
+            <div ng-show="comboData.game == 'Street Fighter V'" class="form-group col-xs-5">
                 <label for="character">* Character:</label>
 
                 <select class="form-control" id="character" ng-model="comboData.character">
@@ -54,7 +54,7 @@
         
            
         <div class="row" >
-            <div ng-show="comboData.game == 'marvel3'"  class="form-group col-xs-5">
+            <div ng-show="comboData.game == 'UMVC3'"  class="form-group col-xs-5">
                 <label for="character">* Character:</label>
                 <span>Capcom</span>
                 <select class="form-control" id="character" ng-model="comboData.character">
@@ -90,7 +90,7 @@
         </div>
         
         <div class="row" >
-                <div ng-show="comboData.game == 'sg'" class="form-group col-xs-5">
+                <div ng-show="comboData.game == 'Skullgirls'" class="form-group col-xs-5">
                     <label for="character">* Character:</label>
 
                     <select class="form-control" id="character" ng-model="comboData.character">

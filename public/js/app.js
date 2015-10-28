@@ -38,6 +38,10 @@ app.config(function($routeProvider) {
     .when("/games/marvel3/ryu", {
         templateUrl: "html/marvel3ryu.html"
     })
+    .when("/games/test/:game", {
+        templateUrl: "html/game.html",
+        controller: "characterCombos"
+        })
     .when("/output", {
         templateUrl: "html/testoutput.html",
         controller: "comboList"
