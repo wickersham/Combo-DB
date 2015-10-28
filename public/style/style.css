@@ -14,6 +14,13 @@ display: none;
 #main {
 /*    float: top;*/
 }
+#marvel {
+    float:left;
+}
+
+#capcom {
+    float:right;
+}
 
 #words {
     padding-top: 40px;

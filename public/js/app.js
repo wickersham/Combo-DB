@@ -8,13 +8,13 @@ app.config(function($routeProvider) {
     .when("/games", {
         templateUrl: "html/games.html"
     })
-//    .when("/games/:game", {
-//        templateUrl: "",
-//        controller: "gamesController""
-//    })
-    .when("/games/sf5", {
-        templateUrl: "html/sf5.html"
+    .when("/games/:game", {
+        templateUrl: "html/game.html",
+        controller: "grabCharactersFromGame"
     })
+//    .when("/games/sf5", {
+//        templateUrl: "html/sf5.html"
+//    })
     .when("/help", {
         templateUrl: "html/help.html"
     })
@@ -28,20 +28,20 @@ app.config(function($routeProvider) {
         templateUrl: "html/submit.html",
         controller: "comboConstruct"
     })
-    .when("/games/sf5/ryu", {
-        templateUrl: "html/sf5ryu.html",
-        controller: "characterCombos" 
-    })
-    .when("/games/marvel3", {
-        templateUrl: "html/marvel3.html"
-    })
-    .when("/games/marvel3/ryu", {
-        templateUrl: "html/marvel3ryu.html"
-    })
-    .when("/games/test/:game", {
-        templateUrl: "html/game.html",
-        controller: "characterCombos"
-        })
+//    .when("/games/sf5/ryu", {
+//        templateUrl: "html/sf5ryu.html",
+//        controller: "characterCombos" 
+//    })
+//    .when("/games/marvel3", {
+//        templateUrl: "html/marvel3.html"
+//    })
+//    .when("/games/marvel3/ryu", {
+//        templateUrl: "html/marvel3ryu.html"
+//    })
+//    .when("/games/test/:game", {
+//        templateUrl: "html/game.html",
+//        controller: "characterCombos"
+//        })
     .when("/output", {
         templateUrl: "html/testoutput.html",
         controller: "comboList"

@@ -3,21 +3,35 @@
         <h3>Select your character:</h3>
         
         <ul>
-            <li><a href="#/games/sf5/ryu">Ryu</a></li>
-            <li>Chun Li</li>
-            <li>Ken</li>
-            <li>Bison (dictator)</li>
-            <li>Vega (claw)</li>
-            <li>Nash</li>
-            <li>Birdie</li>
-            <li>R Mika</li>
-            <li>Rashid</li>
-            <li>Necali</li>
-            <li>Urien</li>
-            <li>Oro</li>
-            <li>Q</li>
-            <li>Sean</li>
+            <li></li>
+            
         </ul>
+        
+<!--
+        <div ng-repeat="combo in getyecharacters">
+        <p>{{ combo.character }}</p>
+        </div>
+        
+-->
+       
+       <h1>all the combos</h1>
+   <div class="container row" ng-repeat="combo in getyecharacters">
+    <div class="well" class="col-md-6">
+       <h1>{{ combo.notation }}</h1>
+       
+       <p>character: {{ combo.character }}</p>
+       <p>game: {{ combo.game }}</p>
+       <p>dmg: {{ combo.damage }}</p>
+       <p>tags: {{ combo.tags }}</p>
+       <p>stun: {{ combo.stun }}</p>
+       <p>notes: {{ combo.notes }}</p>
+
+        <button type="submit" ng-click="deleteCombo(combo._id)">x</button>
+<!--        <button type="" >edit</button>-->
+    </div>
+    
+</div>
+    
         
     </section>
     

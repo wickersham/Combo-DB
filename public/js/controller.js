@@ -48,7 +48,18 @@ app.controller("characterCombos", function($scope, $http, $route) {
     getCombosByCharacter();
 });
 
-app.controller("grabCharactersFromGame")
+app.controller("grabCharactersFromGame", function($scope, $http, $route) {
+    $scope.getyecharacters = [];
+    
+    var getCharacters = function() {
+        $http.get("/api/combos/" + $route.current)
+        .then(function(response) {
+            $scope.getyecharacters = response.data;
+        });
+    };
+    getCharacters();
+});
+
 //app.controller("gamesController", function($scope, $routeParams) {
 //    $scope.model
 //    

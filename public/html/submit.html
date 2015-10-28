@@ -25,89 +25,125 @@
             </div>
         </div>
         
+        <label for="character">* Character:</label> <br>
+        
         <div class="row">
             <div ng-show="comboData.game == 'Street Fighter V'" class="form-group col-xs-5">
-                <label for="character">* Character:</label>
+                
 
                 <select class="form-control" id="character" ng-model="comboData.character">
-                            <option value = "ryu">Ryu</option>
-                            <option value = "chun">Chun</option>
-                            <option value = "nash">Nash</option>
-                            <option value = "dic">Dictator (Bison)</option>
-                            <option value = "claw">Claw (Vega)</option>
-                            <option value = "cammy">Cammy</option>
-                            <option value = "birdie">Birdie</option>
-                            <option value = "ken">Ken</option>
-                            <option value = "necalli">Necalli</option>
-                            <option value = "mika">R Mika</option>
-                            <option value = "rashid">Rashid</option>
-                            <option value = "karin">Karin</option>
-                            <option value = "zangief">Zangief</option>
-                            <option value = "laura">Laura</option>
-                            <option value = "juri">Juri</option>
-                            <option value = "zen">Zen</option>
-                            <option value = "tba">---</option>
+                            <option value = "Ryu">Ryu</option>
+                            <option value = "Chun Li">Chun</option>
+                            <option value = "Nash">Nash</option>
+                            <option value = "Dictator">Dictator (Bison)</option>
+                            <option value = "Claw">Claw (Vega)</option>
+                            <option value = "Cammy">Cammy</option>
+                            <option value = "Birdie">Birdie</option>
+                            <option value = "Ken">Ken</option>
+                            <option value = "Necalli">Necalli</option>
+                            <option value = "R Mika">R Mika</option>
+                            <option value = "Rashid">Rashid</option>
+                            <option value = "Karin">Karin</option>
+                            <option value = "Zangief">Zangief</option>
+                            <option value = "Laura">Laura</option>
+                            <option value = "Juri">Juri</option>
+                            <option value = "Zen">Zen</option>
+                            <option value = "Dhalsim">Dhalsim</option>
 
                         </select>
             </div>
         </div>
         
            
-        <div class="row" >
-            <div ng-show="comboData.game == 'UMVC3'"  class="form-group col-xs-5">
-                <label for="character">* Character:</label>
+        <span>
+            <span ng-show="comboData.game == 'UMVC3'" id="capcom"  class="form-group col-xs-5">
+                
                 <span>Capcom</span>
-                <select class="form-control" id="character" ng-model="comboData.character">
-                            <option value = "akuma">Akuma</option>
-                            <option value = "amaterasu">Amaterasu</option>
-                            <option value = "arthur">Arthur</option>
-                            <option value = "c viper">C Viper</option>
-                            <option value = "chris">Chris</option>
-                            <option value = "chun">Chun Li</option>
-                            <option value = "dante">Dante</option>
-                            <option value = "felicia">Felicia</option>
-                            <option value = "firebrand">Firebrand</option>
-                            <option value = "frank west">Frank West</option>
-                            <option value = "haggar">Haggar</option>
-                            <option value = "hsien ko">Hsien Ko</option>
-                            <option value = "jill">Jill</option>
-                            <option value = "morrigan">Morrigan</option>
-                            <option value = "nemesis">Nemesis</option>
-                            <option value = "phoenix wright">Phoenix Wright</option>
-                            <option value = "ryu">Ryu</option>
-                            <option value = "spencer">Spencer</option>
-                            <option value = "strider">Strider</option>
-                            <option value = "trish">Trish</option>
-                            <option value = "tron bonne">Tron Bonne</option>
-                            <option value = "vergil">Vergil</option>
-                            <option value = "viewtiful joe">Viewtiful Joe</option>
-                            <option value = "wesker">Wesker</option>
-                            <option value = "zero">Zero</option>
+                <select class="form-control" ng-model="comboData.character">
+                            <option value = "Akuma">Akuma</option>
+                            <option value = "Amaterasu">Amaterasu</option>
+                            <option value = "Arthur">Arthur</option>
+                            <option value = "C Viper">C Viper</option>
+                            <option value = "Chris">Chris</option>
+                            <option value = "Chun Li">Chun Li</option>
+                            <option value = "Dante">Dante</option>
+                            <option value = "Felicia">Felicia</option>
+                            <option value = "Firebrand">Firebrand</option>
+                            <option value = "Frank West">Frank West</option>
+                            <option value = "Haggar">Haggar</option>
+                            <option value = "Hsien Ko">Hsien Ko</option>
+                            <option value = "Jill">Jill</option>
+                            <option value = "Morrigan">Morrigan</option>
+                            <option value = "Nemesis">Nemesis</option>
+                            <option value = "Phoenix Wright">Phoenix Wright</option>
+                            <option value = "Ryu">Ryu</option>
+                            <option value = "Spencer">Spencer</option>
+                            <option value = "Strider">Strider</option>
+                            <option value = "Trish">Trish</option>
+                            <option value = "Tron Bonne">Tron Bonne</option>
+                            <option value = "Vergil">Vergil</option>
+                            <option value = "Viewtiful Joe">Viewtiful Joe</option>
+                            <option value = "Wesker">Wesker</option>
+                            <option value = "Zero">Zero</option>
 
 
                         </select>
-            </div>
-        </div>
+            </span>
+        </span>
+        
+        <span>
+            <span ng-show="comboData.game == 'UMVC3'"  id="marvel" class="form-group col-xs-5">
+                <label for="character"></label>
+                <span>Marvel:</span>
+                <select class="form-control" ng-model="comboData.character">
+                            <option value = "Captain America">Captain America</option>
+                            <option value = "Deadpool">Deadpool</option>
+                            <option value = "Doctor Doom">Doctor Doom</option>
+                            <option value = "Doctor Strange">Doctor Strange</option>
+                            <option value = "Dormammu">Dormammu</option>
+                            <option value = "Ghost Rider">Ghost Rider</option>
+                            <option value = "Hawkeye">Hawkeye</option>
+                            <option value = "Hulk">Hulk</option>
+                            <option value = "Iron Fist">Iron Fist</option>
+                            <option value = "Iron Man">Iron Man</option>
+                            <option value = "Magneto">Magneto</option>
+                            <option value = "MODOK">MODOK</option>
+                            <option value = "Nova">Nova</option>
+                            <option value = "Phoenix">Phoenix</option>
+                            <option value = "Rocket Raccoon">Rocket Raccoon</option>
+                            <option value = "Sentinel">Sentinel</option>
+                            <option value = "She Hulk">She Hulk</option>
+                            <option value = "Shuma Gorath">Shuma Gorath</option>
+                            <option value = "Spider Man">Spider Man</option>
+                            <option value = "Storm">Storm</option>
+                            <option value = "Super Skrull">Super Skrull</option>
+                            <option value = "Taskmaster">Taskmaster</option>
+                            <option value = "Thor">Thor</option>
+                            <option value = "Wolverine">Wolverine</option>
+                            <option value = "X 23">X 23</option>
+                            
+                        </select>
+            </span>
+        </span>
         
         <div class="row" >
                 <div ng-show="comboData.game == 'Skullgirls'" class="form-group col-xs-5">
-                    <label for="character">* Character:</label>
 
                     <select class="form-control" id="character" ng-model="comboData.character">
-                                <option value = "squig">Squigly</option>
-                                <option value = "bb">Big Band</option>
-                                <option value = "eliza">Eliza</option>
-                                <option value = "fortune">Fortune</option>
-                                <option value = "cock">Peacock</option>
-                                <option value = "pw">Painwheel</option>
-                                <option value = "filia">Filia</option>
-                                <option value = "bella">Cerabella</option>
-                                <option value = "val">Valentine</option>
-                                <option value = "parasoul">Parasoul</option>
-                                <option value = "double">Double</option>
-                                <option value = "fukua">Fukua</option>
-                                <option value = "beow">Beowulf</option>
-                                <option value = "robo f">Robo Fortune</option>
+                                <option value = "Squigly">Squigly</option>
+                                <option value = "Big Band">Big Band</option>
+                                <option value = "Eliza">Eliza</option>
+                                <option value = "Ms Fortune">Ms Fortune</option>
+                                <option value = "Peacock">Peacock</option>
+                                <option value = "Painwheel">Painwheel</option>
+                                <option value = "Filia">Filia</option>
+                                <option value = "Bella">Cerabella</option>
+                                <option value = "Valentine">Valentine</option>
+                                <option value = "Parasoul">Parasoul</option>
+                                <option value = "Double">Double</option>
+                                <option value = "Fukua">Fukua</option>
+                                <option value = "Beowulf">Beowulf</option>
+                                <option value = "Robo Fortune">Robo Fortune</option>
 
                             </select>
                     </div>
