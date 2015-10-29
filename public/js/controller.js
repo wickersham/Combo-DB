@@ -39,7 +39,7 @@ app.controller("characterCombos", function($scope, $http, $route) {
     
 
     var getCombosByCharacter = function() {
-        $http.get("/api/combos/Street Fighter V/ryu")
+        $http.get("/api/combos/:game/:character")
             .then(function(response) {
             $scope.combosbycharacter = response.data;
          console.log($route.current);
@@ -52,7 +52,7 @@ app.controller("grabCharactersFromGame", function($scope, $http, $route) {
     $scope.getyecharacters = [];
     
     var getCharacters = function() {
-        $http.get("/api/combos/" + $route.current)
+        $http.get("/api/combos/" + $route.current.params.game)
         .then(function(response) {
             $scope.getyecharacters = response.data;
         });

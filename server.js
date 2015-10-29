@@ -5,6 +5,7 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
+
 //model
 var comboSchema = new Schema({
     
@@ -16,7 +17,7 @@ var comboSchema = new Schema({
     stun: Number,
     
 //    tags: Array,
-//    modified: Date,
+    modified: String,
 //    
 //    
 //    range: String, // must be close/far
@@ -85,6 +86,16 @@ server.get("/api/combos/:game/:character", function(req, res) {
 });
 
 
+//for last modified
+var dt = new Date();
+
+// Display the month, day, and year. getMonth() returns a 0-based number.
+var month = dt.getMonth()+1;
+var day = dt.getDate();
+var year = dt.getFullYear();
+//document.write(month + '-' + day + '-' + year);
+// Output: current month, day, year
+
 //save route
 server.post("/api/combos", function(req, res) {
     var combo = new Combo({
@@ -95,8 +106,8 @@ server.post("/api/combos", function(req, res) {
         damage: req.body.damage,
         tags: req.body.tags,
         stun: req.body.stun,
-        notes: req.body.notes        
-//        modified: req.body.modified,
+        notes: req.body.notes,        
+        modified: month + '-' + day + '-' + year,
 //
 //        
 //        range: req.body.range, // must be close/far

@@ -1,6 +1,7 @@
 <h1>all the combos</h1>
-   <div class="container row" ng-repeat="combo in combos">
-    <div class="well" class="col-md-6">
+  <div class="row">
+   <div class="container" ng-repeat="combo in combos">
+    <div class="well col-xs-7" rows= "5">
        <h1>{{ combo.notation }}</h1>
        
        <p>character: {{ combo.character }}</p>
@@ -8,11 +9,11 @@
        <p>dmg: {{ combo.damage }}</p>
        <p>tags: {{ combo.tags }}</p>
        <p>stun: {{ combo.stun }}</p>
-       <p>notes: {{ combo.notes }}</p>
+       <p>modified: {{ combo.modified }}</p>
 
         <button type="submit" ng-click="deleteCombo(combo._id)">x</button>
 <!--        <button type="" >edit</button>-->
+     </div>
     </div>
-    
-</div>
+  </div>
     
