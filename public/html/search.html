@@ -1,0 +1,27 @@
+
+    <section>
+        
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-4">
+
+        <h3>Search combos:</h>
+      <input type="text" class="form-control" ng-model="query"> <br><hr>
+
+    </div>
+    <div class="col-xs-7">
+
+
+      <ul class="combos">
+        <li ng-repeat="combo in combos | filter:query">
+          <a href="#/games/{{ combo.game }}/{{ combo.character }}/{{ combo._id }}">{{combo.notation}}</a>
+<!--          <p>{{combo.damage}}</p>-->
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+    </section>
+    
+   

@@ -1,20 +1,25 @@
 
 <section>
    
-        <div class="row col-xs-7" id="combostyle">    
+        <div class="row col-xs-8" id="combostyle">    
     {{ combobyid.notation }}
             </div><br><br><br><br><hr>
+            <div class="row col-xs-6 paddingleft">
+                <div>Character: <a href="#/games/{{ combobyid.game }}/{{ combobyid.character }}">{{ combobyid.character }}</a></li></div>
+                <div>Game: <a href="#/games/{{ combobyid.game }}">{{ combobyid.game }}</a></li></div>
+                <div>Damage: {{ combobyid.damage }}</div>
+                <div>Stun: {{ combobyid.stun }}</div>
+                <div>Notes:</div>
+                <div><pre>{{ combobyid.notes }}</pre></div>
+                <div>Range: {{ combobyid.range }}</div>
+                <div>Difficulty: {{ combobyid.difficulty }}</div>
+                <div>Tags: {{ combobyid.tags }}</div>
+                <div>Last Modified: {{ combobyid.modified }}</div> <br>
+                <button type="submit" class="btn btn-default">edit</button>
+            </div>
             
-            <div><a href="#/games/{{ combobyid.game }}/{{ combobyid.character }}">{{ combobyid.character }}</a></li></div>
-            <div><a href="#/games/{{ combobyid.game }}">{{ combobyid.game }}</a></li></div>
-            <div>damage: {{ combobyid.damage }}</div>
-            <div>stun: {{ combobyid.stun }}</div>
-            <div>notes:</div>
-            <div>{{ combobyid.notes }}</div>
-            <div>range: {{ combobyid.range }}</div>
-            <div>difficulty: {{ combobyid.difficulty }}</div>
-            <div>tags: {{ combobyid.tags }}</div>
-            <div>last modified: {{ combobyid.modified }}</div>
+            
+            
 </section>
 
 <!--

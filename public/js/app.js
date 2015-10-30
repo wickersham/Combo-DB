@@ -26,6 +26,9 @@ app.config(function($routeProvider) {
     .when("/help", {
         templateUrl: "html/help.html"
     })
+    .when("/about", {
+        templateUrl: "html/about.html"
+    })
     .when("/submit", {
         templateUrl: "html/submit.html",
         controller: "comboConstruct"
@@ -53,6 +56,10 @@ app.config(function($routeProvider) {
 //        })
     .when("/output", {
         templateUrl: "html/testoutput.html",
+        controller: "comboList"
+    })
+    .when("/search", {
+        templateUrl: "html/search.html",
         controller: "comboList"
     })
     .otherwise({
