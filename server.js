@@ -15,12 +15,10 @@ var comboSchema = new Schema({
     damage: Number,
     notes: String,
     stun: Number,
-    
-//    tags: Array,
-    modified: String,
-//    
-//    
-//    range: String, // must be close/far
+    tags: String,
+    modified: String,  
+    range: String,
+    difficulty: String
 //    aka: String,
 
     // yt/source field
@@ -85,6 +83,16 @@ server.get("/api/combos/:game/:character", function(req, res) {
     });
 });
 
+//get one combo by id
+server.get("/api/combos/combo/id/:id", function(req, res) {
+    Combo.findOne({_id: req.params.id}, function(err, combos) {
+        if(err) {
+            console.log(err);
+        }
+        res.send(combos);
+    });
+});
+
 
 //for last modified
 var dt = new Date();
@@ -106,11 +114,11 @@ server.post("/api/combos", function(req, res) {
         damage: req.body.damage,
         tags: req.body.tags,
         stun: req.body.stun,
-        notes: req.body.notes,        
+        notes: req.body.notes,
+        range: req.body.range, 
+        difficulty: req.body.difficulty,
         modified: month + '-' + day + '-' + year,
-//
-//        
-//        range: req.body.range, // must be close/far
+        
 //        aka: req.body.aka,
 //        
         // yt/source field

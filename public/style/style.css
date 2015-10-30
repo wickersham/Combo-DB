@@ -1,7 +1,7 @@
 
 
 #allcontainer {
-    padding: 20px;
+/*    padding: 20px;*/
     border: 1px solid black;
     border-radius: 10px 10px 10px 10px;
 }
@@ -11,16 +11,18 @@ display: none;
 }
 
 
+/*
 #main {
     float: left;
 }
-#marvel {
-    float:left;
+*/
+#combostyle {
+    font: 2em monospace;
+    text-align: center;
+    text-decoration: underline;
+/*    background-color: yellow;*/
 }
 
-#capcom {
-    float:right;
-}
 
 #words {
     padding-top: 40px;
@@ -30,11 +32,13 @@ display: none;
 }
 
 #gamesbar {
-    font: 1em sans-serif;
+    font: 1.3em monospace;
     margin: 4px;
-    border: 1px solid black;
+/*    border: 1px solid black;*/
     clear: both;
-    width: 230px;
+/*    width: 230px;*/
+    justify-content: center;
+    text-align: center;
     float: right;
     list-style-type: none;
 }

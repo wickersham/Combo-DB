@@ -12,11 +12,11 @@
 
 </head>
 <body>
-   <div class="container" class="row" class= "col-xs-12" id="allcontainer">
+   <div class="container" class="row" id="allcontainer">
     <h3><a href="#/home">Combo Db</a></h3> <br>
     
     <header>
-        <ul id="topbar" class="container" class="row" class= "col-xs-8">
+        <ul id="topbar" class="container" class="row col-xs-8">
             
             <li><a href="#/home">Home</a></li>
             <li><a href="#/submit">Submit</a></li>
@@ -29,7 +29,7 @@
     </header>
     
 <!--    <span class="row">-->
-    <span id="gamesbar" class="container" class="col-xs-3">
+    <span id="gamesbar" class="row col-xs-4">
         <ul>
             <li><a href="#/games/Street Fighter V">Street Fighter V</a></li>
             <li><a href="#/games/UMVC3">UMVC3</a></li>
@@ -40,7 +40,7 @@
             <li>Smash</li>
             <li>Super SF2 Turbo</li>
             <li>DIVEKICK</li>     <br>
-                   <a href="#/games">all games:</a> <br>       
+<!--                   <a href="#/games">all games:</a> <br>       -->
             
         </ul>
         
@@ -49,7 +49,7 @@
     
 <span id="main" class="row">
   <span class="container">
-      <span class="col-xs-8" ng-view></span>
+      <span ng-view></span>
   </span>
 </span>
     

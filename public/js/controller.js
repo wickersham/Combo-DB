@@ -34,30 +34,46 @@ app.controller("comboList", function($scope, $http) {
     };
 });
 
-app.controller("characterCombos", function($scope, $http, $route) {
+app.controller("getCombosByCharacter", function($scope, $http, $route) {
     $scope.combosbycharacter = [];
     
 
     var getCombosByCharacter = function() {
-        $http.get("/api/combos/:game/:character")
+        $http.get("/api/combos/" + $route.current.params.game 
+                 + "/" + $route.current.params.character)
             .then(function(response) {
             $scope.combosbycharacter = response.data;
-         console.log($route.current);
+//         console.log($route.current.params.game);
         });
     };
     getCombosByCharacter();
 });
 
-app.controller("grabCharactersFromGame", function($scope, $http, $route) {
-    $scope.getyecharacters = [];
+app.controller("getCharactersByGame", function($scope, $http, $route) {
+    $scope.charactersbygame = [];
     
-    var getCharacters = function() {
+    var getCharactersByGame = function() {
         $http.get("/api/combos/" + $route.current.params.game)
         .then(function(response) {
-            $scope.getyecharacters = response.data;
+            $scope.charactersbygame = response.data;
+//            console.log($route.current.params.game);
         });
     };
-    getCharacters();
+    getCharactersByGame();
+});
+
+app.controller("getComboById", function($scope, $http, $route) {
+
+    $scope.combobyid = [];
+    var getComboById = function() {
+        $http.get("/api/combos/combo/id/" + $route.current.params.id)
+        .then(function(response) {
+//            console.log(response);
+            $scope.combobyid = response.data;
+//            console.log($route.current.params.id);
+        });
+    };
+    getComboById();
 });
 
 //app.controller("gamesController", function($scope, $routeParams) {

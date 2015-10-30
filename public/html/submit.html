@@ -9,7 +9,7 @@
        <form ng-submit="createCombo()">
        <div class="container-fluid">
         <div class="row" >
-            <div class="form-group col-xs-10">
+            <div class="form-group col-xs-8">
                 <label for="game">* Game:</label>
                     <select class="form-control" id="game" ng-model="comboData.game">
                         <option value = "Street Fighter V">Street Fighter V</option>
@@ -28,7 +28,7 @@
         <label for="character">* Character:</label> <br>
         
         <div class="row">
-            <div ng-show="comboData.game == 'Street Fighter V'" class="form-group col-xs-10">
+            <div ng-show="comboData.game == 'Street Fighter V'" class="form-group col-xs-8">
                 
 
                 <select class="form-control" id="character" ng-model="comboData.character">
@@ -56,7 +56,7 @@
         
            
         <span>
-            <span ng-show="comboData.game == 'UMVC3'" id="capcom"  class="form-group col-xs-6">
+            <span ng-show="comboData.game == 'UMVC3'" id="capcom"  class="form-group col-xs-8">
                 
                 <span>Capcom</span>
                 <select class="form-control" ng-model="comboData.character">
@@ -89,10 +89,10 @@
 
                         </select>
             </span>
-        </span>
+        </span> <br>
         
         <span>
-            <span ng-show="comboData.game == 'UMVC3'"  id="marvel" class="form-group col-xs-6">
+            <span ng-show="comboData.game == 'UMVC3'"  id="marvel" class="form-group col-xs-8">
                 <label for="character"></label> 
                 <span>Marvel:</span>
                 <select class="form-control" ng-model="comboData.character">
@@ -127,7 +127,7 @@
         </span>
         
         <div class="row" >
-                <div ng-show="comboData.game == 'Skullgirls'" class="form-group col-xs-10">
+                <div ng-show="comboData.game == 'Skullgirls'" class="form-group col-xs-8">
 
                     <select class="form-control" id="character" ng-model="comboData.character">
                                 <option value = "Squigly">Squigly</option>
@@ -151,39 +151,140 @@
         
         
         <div class="row" >
-            <div class="form-group col-xs-10">
+            <div class="form-group col-xs-8">
                 <label for="notation"  data-toggle="tooltip" title="notation">* Combo Notation:</label>
                 <input type="text" class="form-control" id="notationinput"  ng-model="comboData.notation"> 
             </div>
         </div>
 
         <div class="row" >
-            <div class="form-group col-xs-10">
+            <div class="form-group col-xs-8">
                 <label for="damage">* Damage:</label>
                 <input type="text" class="form-control" id="damageinput"  ng-model="comboData.damage"> <br>
             </div>
         </div>
 
         <div class="row" >   
-            <div class="form-group col-xs-10">             
+            <div class="form-group col-xs-8" ng-show="comboData.game == 'Skullgirls' || comboData.game == 'Street Fighter V'">             
                 <label for="stun">Stun:</label>
                 <input type="text" class="form-control" ng-model="comboData.stun"> <br>
             </div>
         </div>
         
         <div class="row" >
-            <div class="form-group col-xs-10">
-                <label for="description">Notes:</label>
-                <textarea type="text" class="form-control" rows= "10"  ng-model="comboData.notes"></textarea> 
+            <div class="form-group col-xs-8" ng-model="comboData.range">
+                <label for="range">Range:</label>
+                <div class="radio">
+                  <label><input type="radio" name="range" value="close" ng-model="comboData.range">must start close</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="range" value="mid" ng-model="comboData.range">works close and far</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="range" value="far" ng-model="comboData.range">must start far</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="range" value="" ng-model="comboData.range">(leave it blank)</label>
+                </div>
+            </div>
+        </div>
+        
+                <span class="row" >
+            <span class="form-group col-xs-8" ng-model="comboData.difficulty">
+                <label for="difficulty">Difficulty:</label> <br>
+                <span class="radio-inline">
+                  <label><input type="radio" name="difficulty" value="1" ng-model="comboData.difficulty">1 </label><span ng-show="comboData.difficulty == '1'"> low forward fireball</span><br>
+                
+                  <label><input type="radio" name="difficulty" value="2" ng-model="comboData.difficulty">2 </label><span ng-show="comboData.difficulty == '2'"> low forward fireball super</span><br>
+                
+                  <label><input type="radio" name="difficulty" value="3" ng-model="comboData.difficulty">3 </label><span ng-show="comboData.difficulty == '3'"> FADC Ultra</span><br>
+                
+                  <label><input type="radio" name="difficulty" value="4" ng-model="comboData.difficulty">4 </label><span ng-show="comboData.difficulty == '4'"><a href="https://www.youtube.com/watch?v=mRep2L-BfmM" target="_blank"> KOF 100% combo</a></span><br>
+                
+                  <label><input type="radio" name="difficulty" value="5" ng-model="comboData.difficulty">5 </label>
+                  <span ng-show="comboData.difficulty == '5'"><a href="https://www.youtube.com/watch?v=ExvIWy5F91U" target="_blank"> I-no 6FRC6</a></span><br>
+                  
+                  <label><input type="radio" name="difficulty" value="" ng-model="comboData.difficulty">leave it blank </label>
+                  <span ng-show="comboData.difficulty == ''"></span>
+                </span>
+            </span>
+        </span>
+        
+        <div class="row" >
+            <div class="form-group col-xs-8">
+                <label for="notes">Notes:</label>
+                <textarea type="text" class="form-control" rows= "8"  ng-model="comboData.notes"></textarea> 
             </div>
         </div>
         
         <div class="row" >
-            <div class="form-group col-xs-10">
-                <label for="tags">* Tags (separated by commas)</label>
-                <input type="text" class="form-control" id="tagsinput"  ng-model="comboData.tags">
+            <div class="form-group col-xs-8">
+                <label for="tags">* Tags</label>
+<!--                <input type="text" class="form-control" id="tagsinput">-->
+
+        
+                <span class="checkbox disabled" ng-model="comboData.tags">
+                  <label><input type="checkbox" name="tags" value="midscreen" ng-model="comboData.tags">midscreen</label>
+                </span>
+                <span class="checkbox">
+                  <label><input type="checkbox" name="tags" value="corner" ng-model="comboData.tags">corner</label>
+                   </span>
+                <span class="checkbox">
+                  <label><input type="checkbox" name="tags" value="bnb" ng-model="comboData.tags">bread n butter</label>
+                </span>
+                <span class="checkbox">
+                  <label><input type="checkbox" name="tags" value="meterless" ng-model="comboData.tags">meterless</label>
+                </span>
+                <span class="checkbox">
+                  <label><input type="checkbox" name="tags" value="meter burn" ng-model="comboData.tags">meter burn</label>
+                </span>
+                <span class="checkbox">
+                  <label><input type="checkbox" name="tags" value="super" ng-model="comboData.tags">super</label>
+                </span>
+                <span class="checkbox">
+                  <label><input type="checkbox" name="tags" value="low starter" ng-model="comboData.tags">low starter</label>
+                </span>
+                <span class="checkbox">
+                  <label><input type="checkbox" name="tags" value="overhead starter" ng-model="comboData.tags">overhead starter</label>
+                </span>
+                <span class="checkbox">
+                  <label><input type="checkbox" name="tags" value="punish" ng-model="comboData.tags">punish</label>
+                </span>
+                <span class="checkbox">
+                  <label><input type="checkbox" name="tags" value="crossup" ng-model="comboData.tags">crossup</label>
+                </span>
+                </span>
+                <hr>
+                
+
+                <span class="checkbox disabled">
+                  <label><input type="checkbox" name="tags" value="v trigger" ng-show= "comboData.game == 'Street Fighter V'">v trigger</label>
+                </span>
+                <span class="checkbox disabled">
+                  <label><input type="checkbox" name="tags" value="v skill" ng-show= "comboData.game == 'Street Fighter V'">v skill</label>
+                </span>
+                <span class="checkbox disabled" ng-show="comboData.game == 'UMVC3' || comboData.game == 'Skullgirls'">
+                  <label><input type="checkbox" name="tags" value="assist">assist</label>
+                </span>
+<!--
+                <span class="checkbox disabled">
+                  <label><input type="checkbox" value="hd" disabled>hd</label>
+                </span>
+                <span class="checkbox disabled">
+                  <label><input type="checkbox" value="roman cancel" disabled>roman cancel</label>
+                </span>
+-->
+<!--
+                <span class="checkbox disabled">
+                  <label><input type="checkbox" name="tags" value="big stun">big stun</label>
+                </span>
+-->
+                <span class="checkbox disabled" ng-show="comboData.game == 'Skullgirls'">
+                  <label><input type="checkbox" name="tags" value="burst bait">burst bait</label>
+                </span>        
+                
             </div>
-        </div>
+        </div>                
 <!--
         <label for="who">tested on:</label>
         <div class="checkbox">
@@ -263,7 +364,7 @@
            
         <br><br>
         
-        <button type="submit" class="btn btn-default">create it</button>
+        <button type="submit" class="btn btn-default">submit combo</button>
         
         <br><br><br><br><br>
         </form>

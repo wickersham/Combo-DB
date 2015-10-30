@@ -1,19 +1,13 @@
 
-    <section>
-        <h3>Select your character:</h3>
-        
-        <ul class="container">
-            <li ng-repeat="combo in getyecharacters">{{ combo.character }}</li>
-            
-        </ul>
-        
-<!--
-        <div ng-repeat="combo in getyecharacters">
-        <p>{{ combo.character }}</p>
-        </div>
-        
--->
+<section>
+    <h3>Select your character:</h3>
 
-    </section>
-    
+    <ul class="col-xs-7">
+        <li ng-repeat="combo in charactersbygame | uniqueChar">
+        <a href="#/games/{{ combo.game }}/{{combo.character}}">{{ combo.character }}</a></li>
+
+    </ul>
+
+</section>
+
    

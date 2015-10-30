@@ -1,0 +1,12 @@
+
+<section>
+    <h3>combos we gots:</h3>
+
+    <ul class="col-xs-8">
+        <li ng-repeat="combo in combosbycharacter">
+        <a href="#/games/{{ combo.game }}/{{ combo.character }}/{{combo._id}}">{{ combo.notation }}</a></li>
+
+    </ul>
+
+</section>
+

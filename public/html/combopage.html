@@ -1,0 +1,31 @@
+
+<section>
+   
+        <div class="row col-xs-7" id="combostyle">    
+    {{ combobyid.notation }}
+            </div><br><br><br><br><hr>
+            
+            <div><a href="#/games/{{ combobyid.game }}/{{ combobyid.character }}">{{ combobyid.character }}</a></li></div>
+            <div><a href="#/games/{{ combobyid.game }}">{{ combobyid.game }}</a></li></div>
+            <div>damage: {{ combobyid.damage }}</div>
+            <div>stun: {{ combobyid.stun }}</div>
+            <div>notes:</div>
+            <div>{{ combobyid.notes }}</div>
+            <div>range: {{ combobyid.range }}</div>
+            <div>difficulty: {{ combobyid.difficulty }}</div>
+            <div>tags: {{ combobyid.tags }}</div>
+            <div>last modified: {{ combobyid.modified }}</div>
+</section>
+
+<!--
+    character: String,
+    game: String,
+    notation: String,
+    damage: Number,
+    notes: String,
+    stun: Number,
+    tags: String,
+    modified: String,  
+    range: String,
+    difficulty: String
+-->

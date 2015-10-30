@@ -10,30 +10,39 @@ app.config(function($routeProvider) {
     })
     .when("/games/:game", {
         templateUrl: "html/game.html",
-        controller: "grabCharactersFromGame"
+        controller: "getCharactersByGame"
     })
-//    .when("/games/sf5", {
+//    .when("/games/Street Fighter V", {
 //        templateUrl: "html/sf5.html"
 //    })
+    .when("/games/:game/:character", {
+        templateUrl: "html/charmander.html",
+        controller: "getCombosByCharacter"
+    })
+    .when("/games/:game/:character/:id", {
+        templateUrl: "html/combopage.html",
+        controller: "getComboById"
+    })
     .when("/help", {
         templateUrl: "html/help.html"
-    })
-    .when("/test", {
-        templateUrl: "html/test.html"
-    })
-    .when("/test2", {
-        templateUrl: "html/test2.html"
     })
     .when("/submit", {
         templateUrl: "html/submit.html",
         controller: "comboConstruct"
     })
+//    .when("/test", {
+//        templateUrl: "html/test.html"
+//    })
+//    .when("/test2", {
+//        templateUrl: "html/test2.html"
+//    })
 //    .when("/games/sf5/ryu", {
 //        templateUrl: "html/sf5ryu.html",
 //        controller: "characterCombos" 
 //    })
-//    .when("/games/marvel3", {
+//    .when("/games/UMVC3", {
 //        templateUrl: "html/marvel3.html"
+//        
 //    })
 //    .when("/games/marvel3/ryu", {
 //        templateUrl: "html/marvel3ryu.html"
@@ -53,6 +62,23 @@ app.config(function($routeProvider) {
 });
 
 
+
+app.filter("uniqueChar", function(){
+    
+    return function(input){
+        var output = [];
+        var outputName = [];
+        
+        angular.forEach(input, function(element){
+            if(outputName.indexOf(element.character) === -1){
+                output.push(element);
+                outputName.push(element.character);
+            }
+        });
+        
+        return output;
+    }
+});
 
 //
 //function samplecontroller($scope) {
