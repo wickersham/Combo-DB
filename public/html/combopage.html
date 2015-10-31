@@ -1,10 +1,10 @@
 
 <section>
    
-        <div class="row col-xs-8" id="combostyle">    
-    {{ combobyid.notation }}
-            </div><br><br><br><br><hr>
-            <div class="row col-xs-6 paddingleft">
+        <div class="row col-xs-8 combostyle">    
+    {{ combobyid.notation }}  <br><br><hr>
+            </div><br>
+            <div class="row col-xs-8 paddingleft">
                 <div>Character: <a href="#/games/{{ combobyid.game }}/{{ combobyid.character }}">{{ combobyid.character }}</a></li></div>
                 <div>Game: <a href="#/games/{{ combobyid.game }}">{{ combobyid.game }}</a></li></div>
                 <div>Damage: {{ combobyid.damage }}</div>

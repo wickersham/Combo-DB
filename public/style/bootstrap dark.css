@@ -2,35 +2,39 @@
 
 #allcontainer {
 /*    padding: 20px;*/
-    border: 1px solid black;
+    border: 1px solid azure;
     border-radius: 10px 10px 10px 10px;
+    color: azure;
+    background-color: rgb(13, 13, 13);
 }
 
-#normals{
-display: none;
+.title {
+    font: 4em monospace;
+/*    text-align: center;*/
+    text-decoration: underline;
+    margin: 12px;
 }
 
-#combostyle {
+
+.combostyle {
     font: 2em monospace;
     text-align: center;
     text-decoration: underline;
+    padding: 12px
 /*    background-color: yellow;*/
 }
 
-
-#words {
-    padding-top: 40px;
-    padding-left: 20px;
-    margin: 30px;
-    width: 750px;
+#themes {
+    float: right;
+    text-align: right;
 }
 
+
 #gamesbar {
-    font: 1.3em monospace;
+    font: 1.3em;
     margin: 4px;
 /*    border: 1px solid black;*/
     clear: both;
-/*    width: 230px;*/
     justify-content: center;
     text-align: center;
     float: right;
@@ -40,7 +44,7 @@ display: none;
 #gamesbar li {
     font: 1em sans-serif;
     margin: 4px;
-    border: 2px solid white;
+    border: 2px solid  rgb(13, 13, 13);;
     clear: both;
     width: 170px;
     float: right;
@@ -55,41 +59,6 @@ display: none;
     padding-right: 15px;
     padding-left: 15px;
     border-radius: 10px 10px 0 0;
-    border: 1px solid black;
+    border: 1px solid azure;
     
-   }
-#notation{
-    font: 28px monospace;
-}
-
-#aka {
-    font: 16px monospace;
-    
-}
-
-#damage {
-    font: 24px monospace;
-/*    float: right;*/
-    margin: 10px;
-    padding-right: 100px;
-}
-
-#stun {
-    font: 24px monospace;
-/*    float: right;*/
-    margin: 10px;
-    padding-right: 100px;
-}
-
-#description {
-    width: 600px;
-}
-
-
-#modified {
-    text-align: center;
-}
-
-.charactercombosubmit {
-    text-align: center;
 }

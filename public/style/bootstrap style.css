@@ -1,0 +1,71 @@
+
+
+#allcontainer {
+/*    padding: 20px;*/
+    border: 1px solid black;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#normals{
+    display: none;
+}
+
+.combostyle {
+    font: 2em monospace;
+    text-align: center;
+    text-decoration: underline;
+    padding: 12px
+/*    background-color: yellow;*/
+}
+
+.title {
+    font: 4em monospace;
+/*    text-align: center;*/
+    text-decoration: underline;
+    margin: 12px;
+/*    background-color: yellow;*/
+}
+
+#themes {
+    float: right;
+    text-align: right;
+}
+
+#gamesbar {
+    font: 1.3em;
+    margin: 4px;
+/*    border: 1px solid black;*/
+    clear: both;
+    justify-content: center;
+    text-align: center;
+    float: right;
+    list-style-type: none;
+}
+
+#gamesbar li {
+    font: 1em sans-serif;
+    margin: 4px;
+    border: 2px solid white;
+    clear: both;
+    width: 170px;
+    float: right;
+    list-style-type: none;
+}
+
+#topbar li {
+    font: 1em sans-serif;
+    text-align: center;
+    list-style-type: none;
+    display: inline;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid black;
+    
+}
+
+.darktheme {
+    background-color: ;
+    color: azure;
+    
+}
