@@ -33,6 +33,27 @@ app.config(function($routeProvider) {
         templateUrl: "html/submit.html",
         controller: "comboConstruct"
     })
+    .when("/guide", {
+        templateUrl: "html/guide.html",
+    })
+    .when("/help/jargon", {
+        templateUrl: "html/jargon.html",
+    })
+    .when("/help/notation", {
+        templateUrl: "html/notation.html",
+    })
+    .when("/fundamentals", {
+        templateUrl: "html/fundamentals.html",
+    })
+    .when("/advanced", {
+        templateUrl: "html/advanced.html",
+    })
+    .when("/resources", {
+        templateUrl: "html/resources.html",
+    })
+//    .when("/lodash", {
+//        templateUrl: "html/lodash.html",
+//    })
 //    .when("/test", {
 //        templateUrl: "html/test.html"
 //    })
@@ -41,11 +62,11 @@ app.config(function($routeProvider) {
 //    })
 //    .when("/games/sf5/ryu", {
 //        templateUrl: "html/sf5ryu.html",
-//        controller: "characterCombos" 
+//        controller: "characterCombos"
 //    })
 //    .when("/games/UMVC3", {
 //        templateUrl: "html/marvel3.html"
-//        
+//
 //    })
 //    .when("/games/marvel3/ryu", {
 //        templateUrl: "html/marvel3ryu.html"
@@ -71,18 +92,18 @@ app.config(function($routeProvider) {
 
 
 app.filter("uniqueChar", function(){
-    
+
     return function(input){
         var output = [];
         var outputName = [];
-        
+
         angular.forEach(input, function(element){
             if(outputName.indexOf(element.character) === -1){
                 output.push(element);
                 outputName.push(element.character);
             }
         });
-        
+
         return output;
     }
 });

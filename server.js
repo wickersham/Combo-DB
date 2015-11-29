@@ -8,7 +8,7 @@ var Schema = mongoose.Schema;
 
 //model
 var comboSchema = new Schema({
-    
+
     character: String,
     game: String,
     notation: String,
@@ -16,13 +16,13 @@ var comboSchema = new Schema({
     notes: String,
     stun: Number,
     tags: String,
-    modified: String,  
+    modified: String,
     range: String,
     difficulty: String
 //    aka: String,
 
     // yt/source field
-    
+
 });
 
 var Combo = mongoose.model("Combo", comboSchema);
@@ -107,7 +107,7 @@ var year = dt.getFullYear();
 //save route
 server.post("/api/combos", function(req, res) {
     var combo = new Combo({
-        
+
         character: req.body.character,
         game: req.body.game,
         notation: req.body.notation,
@@ -115,14 +115,14 @@ server.post("/api/combos", function(req, res) {
         tags: req.body.tags,
         stun: req.body.stun,
         notes: req.body.notes,
-        range: req.body.range, 
+        range: req.body.range,
         difficulty: req.body.difficulty,
         modified: month + '-' + day + '-' + year,
-        
+
 //        aka: req.body.aka,
-//        
+//
         // yt/source field
- 
+
     });
     //mongoose model function
     combo.save(function(err){
@@ -135,10 +135,10 @@ server.post("/api/combos", function(req, res) {
 });
 
 
+
+
+
+
 server.listen(1337, function(){
     console.log("now listening on port 1337");
 });
-
-
-
-
