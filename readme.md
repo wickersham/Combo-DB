@@ -1,4 +1,5 @@
-## Combo Db
+# Combo-DB
+a resource and database for fighting game combos
 
 This site is desinged to organize combos for various fighting games by character, game, tags, damage, and more!
 
@@ -6,7 +7,7 @@ The submit form, routes, and display view, rely on AngularJS, while the database
 
 Features to be added:
 
-*users
-*edit button
-*improved search functionality
-*trending/popular tags
+-users
+-edit button
+-improved search functionality
+-trending/popular tags

@@ -15,6 +15,19 @@ app.config(function($routeProvider) {
 //    .when("/games/Street Fighter V", {
 //        templateUrl: "html/sf5.html"
 //    })
+
+
+
+
+
+
+
+
+    .when("/games/Street Fighter V/Chun Li", {
+      templateUrl: "html/SFVCharacters/ChunLi.html",
+      controller: "getCombosByCharacter"
+    })
+
     .when("/games/:game/:character", {
         templateUrl: "html/charmander.html",
         controller: "getCombosByCharacter"
@@ -42,18 +55,19 @@ app.config(function($routeProvider) {
     .when("/help/notation", {
         templateUrl: "html/notation.html",
     })
-    .when("/fundamentals", {
+    .when("/help/fundamentals", {
         templateUrl: "html/fundamentals.html",
     })
-    .when("/advanced", {
+    .when("/help/advanced", {
         templateUrl: "html/advanced.html",
     })
-    .when("/resources", {
+    .when("/help/resources", {
         templateUrl: "html/resources.html",
     })
-//    .when("/lodash", {
-//        templateUrl: "html/lodash.html",
-//    })
+    .when("/frames", {
+       templateUrl: "html/frames.html",
+       controller: "frameData"
+   })
 //    .when("/test", {
 //        templateUrl: "html/test.html"
 //    })
