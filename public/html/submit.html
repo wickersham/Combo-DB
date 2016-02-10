@@ -16,6 +16,9 @@
                         <option value = "Skullgirls">Skullgirls</option>
                         <option value = "UMVC3">Marvel 3</option>
                         <option value = "Guilty Gear AC +R">Guilty Gear AC +R</option>
+                        <option value = "MKX">MKX</option>
+                        <option value = "KOF XIII">KOF XIII</option>
+
                         <!-- <option value = "Guilty Gear Xrd">Guilty Gear Xrd</option>
                         <option value = "Street Fighter III">SFIII Third Strike</option>
                         <option value = "USFIV">USFIV</option> -->
@@ -48,6 +51,41 @@
                         <option value = "Laura">Laura</option>
                         <option value = "Dhalsim">Dhalsim</option>
                         <option value = "FANG">FANG</option>
+
+                        </select>
+            </span>
+        </span>
+
+        <span>
+            <span ng-show="comboData.game == 'MKX'" class="form-group col-xs-8">
+
+
+                <select class="form-control" id="character" ng-model="comboData.character">
+                        <option value = "Kung Lao">Kung Lao</option>
+                        <option value = "Jax">Jax</option>
+                        <option value = "Sonya">Sonya</option>
+                        <option value = "Kenshi">Kenshi</option>
+                        <option value = "Kitana">Kitana</option>
+                        <option value = "Scorpion">Scorpion</option>
+                        <option value = "Subzero">Subzero</option>
+                        <option value = "Mileena">Mileena</option>
+                        <option value = "Takeda">Takeda</option>
+                        <option value = "Cassie">Cassie</option>
+                        <option value = "Jaqui">Jaqui</option>
+                        <option value = "Kung Jin">Kung Jin</option>
+                        <option value = "Shinnok">Shinnok</option>
+                        <option value = "Kano">Kano</option>
+                        <option value = "Ermac">Ermac</option>
+                        <option value = "Kotal Kahn">Kotal Kahn</option>
+                        <option value = "Reptile">Reptile</option>
+                        <option value = "Dvorah">Dvorah</option>
+                        <option value = "Raiden">Raiden</option>
+                        <option value = "Quan Chi">Quan Chi</option>
+                        <option value = "Goro">Goro</option>
+                        <option value = "Predator">Predator</option>
+                        <option value = "Jason">Jason</option>
+                        <option value = "Tanya">Tanya</option>
+                        <option value = "Tremor">Tremor</option>
 
                         </select>
             </span>
@@ -248,7 +286,10 @@
 
         <div class="row" >
             <div class="form-group col-xs-8">
-                <label for="notation"  data-toggle="tooltip" title="notation">* Combo Notation:</label>
+                <label for="notation"  data-toggle="tooltip" title="notation">* Combo Notation:</label><br>
+                <span ng-show="comboData.game == 'MKX'"  class="form-group col-xs-8">
+                        For MKX, include variation in notation
+                    </span>
                 <input type="text" class="form-control" id="notationinput"  ng-model="comboData.notation">
             </div>
         </div>
@@ -317,8 +358,14 @@
 
         <div class="row" >
             <div class="form-group col-xs-8">
-                <label for="damage">* Tags:</label>
+                <label for="damage">* Tags/Keywords:</label>
                 <input type="text" class="form-control" id="damageinput"  ng-model="comboData.tags"> <br>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="form-group col-xs-8">
+                <label for="damage">* Submitted by:</label>
+                <input type="text" class="form-control" id="damageinput"  ng-model="comboData.submitter"> <br>
             </div>
         </div>
 

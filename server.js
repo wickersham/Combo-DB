@@ -18,7 +18,8 @@ var comboSchema = new Schema({
     tags: String,
     modified: String,
     range: String,
-    difficulty: String
+    difficulty: String,
+    submitter: String
 //    aka: String,
 
     // yt/source field
