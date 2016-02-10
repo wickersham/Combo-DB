@@ -1,11 +1,29 @@
 
 <section>
-    <h3>here's what we got</h3>
+    <h3>Let's see what we got in the files</h3>
 
-    <ul class="col-xs-7">
-        <li ng-repeat="combo in combosbycharacter">
-        <a href="#/games/{{ combo.game }}/{{ combo.character }}/{{combo._id}}">{{ combo.notation }}</a></li>
+    <div class="container">
 
-    </ul>
+      <table class="table table-hover"  class="row col-xs-10">
+        <thead>
+          <tr>
+            <th>Notation</th>
+            <th>Damage</th>
+            <th>Stun</th>
+            <th>Tags/Keywords</th>
+            <th>Modified</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="combo in combosbycharacter">
+            <td> <a href="#/games/{{ combo.game }}/{{ combo.character }}/{{combo._id}}">{{ combo.notation }}</a> </td>
+            <td> {{ combo.damage }} </td>
+            <td> {{ combo.stun }} </td>
+            <td> {{ combo.tags }} </td>
+            <td> {{ combo.modified }} </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
 </section>

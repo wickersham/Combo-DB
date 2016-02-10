@@ -21,11 +21,13 @@ app.config(function($routeProvider) {
 
 
 
+    .when("/Street Fighter V/select", {
+        templateUrl: "html/SFVCharacters/SFVselect.html",
+    })
 
-
-    .when("/games/Street Fighter V/Chun Li", {
-      templateUrl: "html/SFVCharacters/ChunLi.html",
-      controller: "getCombosByCharacter"
+    .when("/Street Fighter V/Chun Li", {
+        templateUrl: "html/SFVCharacters/ChunLi.html",
+        controller: "getCombosByCharacter"
     })
 
     .when("/games/:game/:character", {

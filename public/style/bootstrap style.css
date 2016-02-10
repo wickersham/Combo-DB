@@ -58,8 +58,8 @@
     margin: 4px;
     border: 2px solid white;
     clear: both;
-    width: 170px;
-    float: right;
+    /*width: 170px;*/
+    /*float: right;*/
     list-style-type: none;
 }
 
@@ -79,7 +79,8 @@
     float: right;
     text-align: center;
     border: 1px solid black;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 10px;
 }
 
 .characterbar th {
