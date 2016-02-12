@@ -1,27 +1,51 @@
 
     <section>
-        
+
+<div class="col-xs-5">
+   <h3>Search combos:</h3><br>
+   <p>by any and all fields</p>
+<input type="text" class="form-control" ng-model="query">
+</div>
+
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-4">
-
-        <h3>Search combos:</h>
-      <input type="text" class="form-control" ng-model="query"> <br><hr>
-
-    </div>
-    <div class="col-xs-7">
+    <div class="col-xs-12">
 
 
-      <ul class="combos">
-        <li ng-repeat="combo in combos | filter:query">
-          <a href="#/games/{{ combo.game }}/{{ combo.character }}/{{ combo._id }}">{{combo.notation}}</a>
-<!--          <p>{{combo.damage}}</p>-->
-        </li>
-      </ul>
 
+      <table class="table table-hover">
+        <h3><strong>Results:</strong></h3> <hr>
+        <thead>
+          <tr>
+            <th>Combo</th>
+            <th>Damage</th>
+            <th>Stun</th>
+            <th>Character</th>
+            <th>Game</th>
+            <th>Modified</th>
+            <th>Version</th>
+            <th>Submitted By</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr ng-repeat="combo in combos | filter:query">
+            <td><a href="#/games/{{ combo.game }}/{{ combo.character }}/{{combo._id}}">{{ combo.notation }}</a></td>
+            <td> {{ combo.damage }} </td>
+            <td> {{ combo.stun }} </td>
+            <td> {{ combo.character }} </td>
+            <td> {{ combo.game }} </td>
+            <td> {{ combo.modified }} </td>
+            <td> {{ combo.versioninfo }} </td>
+            <td> {{ combo.submitter }} </td>
+          </tr>
+
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
+
+
+
     </section>
-    
-   

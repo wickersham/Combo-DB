@@ -44,7 +44,7 @@
 #gamesbar li {
     font: 1em sans-serif;
     margin: 4px;
-    border: 2px solid  rgb(13, 13, 13);;
+    border: 2px solid  rgb(13, 13, 13);
     clear: both;
     width: 170px;
     float: right;
@@ -60,5 +60,5 @@
     padding-left: 15px;
     border-radius: 10px 10px 0 0;
     border: 1px solid azure;
-    
+
 }

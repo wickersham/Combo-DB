@@ -1,0 +1,112 @@
+#themechange {
+  background-color: rgb(13, 13, 13);
+}
+
+#allcontainer {
+/*    padding: 20px;*/
+    border: 1px solid azure;
+    border-radius: 10px 10px 10px 10px;
+    color: #b3b3b3;
+}
+
+#normals{
+    display: none;
+}
+
+.combostyle {
+    font: 2em monospace;
+    text-align: center;
+    text-decoration: underline;
+    padding: 12px
+/*    background-color: yellow;*/
+}
+
+.title {
+    font: 4em monospace;
+/*    text-align: center;*/
+/*    text-decoration: underline;*/
+    margin: 12px;
+/*    background-color: yellow;*/
+}
+
+#themes {
+    float: right;
+    text-align: right;
+}
+
+
+#gamesbar {
+    font: 1.3em;
+    margin: 4px;
+/*    border: 1px solid black;*/
+    clear: both;
+    justify-content: center;
+    text-align: center;
+    float: right;
+    list-style-type: none;
+}
+
+#contents {
+    font: 1.3em;
+    margin: 4px;
+    border: 1px solid azure;
+    clear: both;
+    justify-content: center;
+    text-align: left;
+    float: left;
+    list-style-type: none;
+}
+
+#gamesbar li {
+    font: 1em sans-serif;
+    margin: 4px;
+    border: 2px solid rgb(13, 13, 13);
+    clear: both;
+    /*width: 170px;*/
+    /*float: right;*/
+    list-style-type: none;
+}
+
+#topbar li {
+    font: 1em sans-serif;
+    text-align: center;
+    list-style-type: none;
+    display: inline;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid azure;
+
+}
+
+.characterbar {
+    float: right;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 10px;
+}
+
+.characterbar th {
+    padding-left: 8px;
+}
+
+.nudgedown {
+    padding-top: 12px;
+}
+
+#wikinav li{
+    font: 1.5em sans-serif;
+    list-style-type: none;
+    /*display: inline;*/
+}
+
+.darktheme {
+    background-color: ;
+    color: azure;
+
+}
+
+/*body {
+    padding-top:50px;
+}*/

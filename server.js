@@ -17,6 +17,7 @@ var comboSchema = new Schema({
     stun: Number,
     tags: String,
     modified: String,
+    versioninfo: String,
     range: String,
     difficulty: String,
     submitter: String
@@ -119,6 +120,8 @@ server.post("/api/combos", function(req, res) {
         range: req.body.range,
         difficulty: req.body.difficulty,
         modified: month + '-' + day + '-' + year,
+        submitter: req.body.submitter,
+        versioninfo: req.body.versioninfo,
 
 //        aka: req.body.aka,
 //
@@ -140,6 +143,6 @@ server.post("/api/combos", function(req, res) {
 
 
 
-server.listen(1337, function(){
-    console.log("now listening on port 1337");
+server.listen(13377, function(){
+    console.log("now listening on port 13377");
 });
