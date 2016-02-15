@@ -1,6 +1,14 @@
+html {
+  background-color: rgb(13, 13, 13);
+}
+
 #themechange {
   background-color: rgb(13, 13, 13);
 }
+
+/*.table-hover tr:hover {
+  background: yellow;
+}*/
 
 #allcontainer {
 /*    padding: 20px;*/

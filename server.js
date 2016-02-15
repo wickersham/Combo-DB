@@ -143,6 +143,6 @@ server.post("/api/combos", function(req, res) {
 
 
 
-server.listen(13377, function(){
-    console.log("now listening on port 13377");
+server.listen(1337, function(){
+    console.log("now listening on port 1337");
 });

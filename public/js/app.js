@@ -27,8 +27,84 @@ app.config(function($routeProvider) {
 
     .when("/Street Fighter V/Chun Li", {
         templateUrl: "html/SFVCharacters/ChunLi.html",
-        controller: "getCombosByCharacter"
+        // controller: "getCombosByCharacter"
     })
+
+    .when("/Street Fighter V/Birdie", {
+        templateUrl: "html/SFVCharacters/Birdie.html",
+        // controller: "getCombosByCharacter"
+    })
+
+    .when("/Street Fighter V/Cammy", {
+        templateUrl: "html/SFVCharacters/Cammy.html",
+        // controller: "getCombosByCharacter"
+    })
+
+    .when("/Street Fighter V/Dhalsim", {
+        templateUrl: "html/SFVCharacters/Dhalsim.html",
+        // controller: "getCombosByCharacter"
+    })
+
+    .when("/Street Fighter V/FANG", {
+        templateUrl: "html/SFVCharacters/FANG.html",
+        // controller: "getCombosByCharacter"
+    })
+
+    .when("/Street Fighter V/Karin", {
+        templateUrl: "html/SFVCharacters/Karin.html",
+        // controller: "getCombosByCharacter"
+    })
+
+    .when("/Street Fighter V/Ken", {
+        templateUrl: "html/SFVCharacters/Ken.html",
+        // controller: "getCombosByCharacter"
+    })
+
+    .when("/Street Fighter V/Laura", {
+        templateUrl: "html/SFVCharacters/Laura.html",
+        // controller: "getCombosByCharacter"
+    })
+
+    .when("/Street Fighter V/Necalli", {
+        templateUrl: "html/SFVCharacters/Necalli.html",
+        // controller: "getCombosByCharacter"
+    })
+    .when("/Street Fighter V/Vega", {
+        templateUrl: "html/SFVCharacters/Claw.html",
+        // controller: "getCombosByCharacter"
+    })
+    .when("/Street Fighter V/Bison", {
+        templateUrl: "html/SFVCharacters/Dictator.html",
+        // controller: "getCombosByCharacter"
+    })
+    .when("/Street Fighter V/Nash", {
+        templateUrl: "html/SFVCharacters/Nash.html",
+        // controller: "getCombosByCharacter"
+    })
+    .when("/Street Fighter V/Mika", {
+        templateUrl: "html/SFVCharacters/Mika.html",
+        // controller: "getCombosByCharacter"
+    })
+    .when("/Street Fighter V/Rashid", {
+        templateUrl: "html/SFVCharacters/Rashid.html",
+        // controller: "getCombosByCharacter"
+    })
+    .when("/Street Fighter V/Ryu", {
+        templateUrl: "html/SFVCharacters/Ryu.html",
+        // controller: "getCombosByCharacter"
+    })
+    .when("/Street Fighter V/Zangief", {
+        templateUrl: "html/SFVCharacters/Zangief.html",
+        // controller: "getCombosByCharacter"
+    })
+
+
+
+
+
+
+
+
 
     .when("/games/:game/:character", {
         templateUrl: "html/charmander.html",
